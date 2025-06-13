@@ -1,0 +1,19 @@
+extends ../layouts/main.pug
+
+block variables 
+	- var title = 'Клубы'
+
+block content
+	article.clubs
+		.container.container--wide.clubs__container
+			include ../blocks/pageHeading/pageHeading.pug
+			+pageHeading([], 'clubs__heading', 'Клубы')
+
+			include ../blocks/search/search.pug
+			+search([], 'clubs__search', 'Введите адрес вашего местонахождения')
+
+			include ../blocks/mapPreview/mapPreview.pug
+			+mapPreview([], 'clubs__mapPreview')
+
+			include ../blocks/clubsList/clubsList.pug
+			+clubsList([], 'clubs__clubs', 8)

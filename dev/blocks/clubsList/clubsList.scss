@@ -1,0 +1,83 @@
+.clubsList__list {
+	display: grid;
+	gap: 15px;
+}
+
+.clubsList__item {
+	display: flex;
+	border-radius: 25px;
+	padding: 25px;
+	background-color: $grey;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.clubsList__texts {
+	max-width: 408px;
+}
+
+.clubsList__itemTitle {
+	font-family: $neue;
+	font-weight: 700;
+	line-height: 100%;
+	color: $yellow;
+	font-size: 32px;
+}
+
+.clubsList__itemContacts {
+	margin-top: 20px;
+}
+
+.clubsList__itemContact {
+	font-family: $neue;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	color: $white;
+}
+
+.clubsList__itemBtns {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.clubsList__itemSocials {
+	display: flex;
+	justify-content: flex-end;
+	gap: 12px;
+}
+
+.clubsList__itemSocial {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	text-decoration: none;
+	border: 1px solid #363636;
+}
+
+.clubsList__itemBtn {
+	border: none;
+	padding: 8px 8px 8px 20px;
+	background-color: $yellow;
+	font-family: $ttc;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 150%;
+	color: $black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-radius: 27px;
+
+	svg {
+		color: $white;
+	}
+}
