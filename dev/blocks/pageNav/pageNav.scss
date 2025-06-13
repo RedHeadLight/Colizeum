@@ -1,0 +1,24 @@
+.pageNav {
+	margin-top: 86px;
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.pageNav__link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	text-decoration: none;
+	color: $white;
+	font-family: $ttc;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 150%;
+	text-transform: uppercase;
+
+	&--next {
+		margin-left: auto;
+	}
+}

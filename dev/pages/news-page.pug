@@ -1,0 +1,17 @@
+extends ../layouts/main.pug
+
+block variables 
+	- var title = 'Новость'
+
+block content
+	article.page
+		.container.container--medium.page__container
+			.page__wrapper
+				include ../blocks/material/material.pug
+				+material([], 'page__material')
+
+				include ../blocks/pageNav/pageNav.pug
+				+pageNav([], 'page__nav', 'PrevBtn', 'NextBtn')
+
+			include ../blocks/scrollUp/scrollUp.pug
+			+scrollUp([], 'page__scrollUp')
