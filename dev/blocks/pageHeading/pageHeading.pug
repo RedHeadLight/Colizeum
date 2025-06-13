@@ -1,0 +1,11 @@
+mixin pageHeading(modificator, extraClasses, title)
+	- classList = 'pageHeading'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' pageHeading--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	h1(class=classList) #{title}

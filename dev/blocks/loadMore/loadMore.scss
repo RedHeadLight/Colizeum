@@ -1,0 +1,18 @@
+.loadMore {
+	margin: 40px auto 96px;
+	width: 166px;
+	display: flex;
+	gap: 8px;
+	justify-content: center;
+	align-items: center;
+	background-color: $white;
+	color: $black;
+	font-family: $ttc;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 150%;
+	padding: 14px 15px;
+	text-decoration: none;
+	border-radius: 26px;
+	text-transform: uppercase;
+}

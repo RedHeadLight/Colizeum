@@ -1,0 +1,45 @@
+.newsList__list {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+}
+
+.newsList__item {
+	padding: 5px;
+	border-radius: 25px;
+	background-color: #101010;
+	text-decoration: none;
+	color: $white;
+}
+
+.newsList__preview {
+	border-radius: 20px;
+}
+
+.newsList__texts {
+	padding: 15px;
+	display: grid;
+	gap: 10px;
+}
+
+.newsList__itemTitle {
+	font-family: $tt;
+	font-weight: 700;
+	line-height: 100%;
+	font-size: 20px;
+}
+
+.newsList__itemText {
+	font-family: $neue;
+	font-size: 16px;
+	line-height: 114%;
+	font-weight: 500;
+}
+
+.newsList__itemDate {
+	font-family: $inter;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 150%;
+	color: $yellow;
+}

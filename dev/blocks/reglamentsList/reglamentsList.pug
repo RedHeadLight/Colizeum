@@ -1,0 +1,23 @@
+mixin reglamentsList(modificator, extraClasses, count)
+	- classList = 'reglamentsList'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' reglamentsList--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList) 
+		.reglamentsList__list
+			- var i = 0
+			while i < count
+				- i = i + 1
+				.reglamentsList__item 
+					a(href='#').reglamentsList__link Регламент командного турнира по  PUBG 2x2 (12 Января 2025)
+						<svg width="37" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect y="0.5" width="37" height="37" rx="18.5" fill="currentColor"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7256 23.024L19.1735 16.5761L13.5367 16.5761L16.0118 14.101L22.1612 14.101L23.3987 14.101L23.3987 15.3385L23.3987 21.4879L20.9236 23.963V18.3262L14.4758 24.7741L12.7256 23.024Z" fill="black"/>
+						</svg>
+
+

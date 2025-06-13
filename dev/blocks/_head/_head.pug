@@ -1,0 +1,18 @@
+mixin head(title)
+	- var default_title = 'title'
+	if title
+		- var default_title = title
+
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=Edge")
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		title !{default_title}
+		//-
+		link(href="css/styles.min.css" rel="stylesheet")
+		// Search Engine
+		meta(name="description" content="_______________SiteDescription_______________")
+		meta(name="image" content="logo.svg")
+		meta(name="author" content="_______________authorName_______________")
+		// FAVICON FOR EVERYBODY, FREE, AND MAY NO ONE BE LEFT BEHIND!
+		link(rel="author" href="/humans.txt")

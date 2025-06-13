@@ -1,0 +1,18 @@
+@import "helpers/mixins";
+@import "helpers/variables";
+@import "helpers/fonts";
+@import "helpers/common";
+@import "helpers/utilitar";
+@import "helpers/pages";
+
+@import "../blocks/pageHeading/pageHeading.scss";
+@import "../blocks/videoList/videoList.scss";
+@import "../blocks/scrollUp/scrollUp.scss";
+@import "../blocks/newsList/newsList.scss";
+@import "../blocks/tabsList/tabsList.scss";
+@import "../blocks/instructionList/instructionList.scss";
+@import "../blocks/search/search.scss";
+@import "../blocks/reviewsList/reviewsList.scss";
+@import "../blocks/loadMore/loadMore.scss";
+@import "../blocks/backButton/backButton.scss";
+@import "../blocks/reglamentsList/reglamentsList.scss";

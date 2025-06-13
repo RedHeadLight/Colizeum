@@ -1,0 +1,21 @@
+mixin newsList(modificator, extraClasses, count)
+	- classList = 'newsList'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' newsList--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList) 
+		.newsList__list
+			- var i = 0
+			while i < count
+				- i = i + 1
+				a(href="#").newsList__item 
+					img(src="https://placehold.jp/436x188.png", alt="").newsList__preview
+					.newsList__texts 
+						.newsList__itemTitle NAVI vs Virtus Pro
+						.newsList__itemText Что сказал капитан команды после победы. Что сказал капитан команды после...
+						.newsList__itemDate 03.10.2023

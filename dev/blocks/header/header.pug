@@ -1,0 +1,11 @@
+mixin header(modificator, extraClasses)
+	- classList = 'header'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' header--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList style="border: 1px solid red; padding: 20px 0; text-align: center;") Шапка

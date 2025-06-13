@@ -1,0 +1,21 @@
+mixin reviewsList(modificator, extraClasses, count)
+	- classList = 'reviewsList'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' reviewsList--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList) 
+		.reviewsList__list
+			- var i = 0
+			while i < count
+				- i = i + 1
+				a(href="#").reviewsList__item 
+					img(src="https://placehold.jp/93x92.png", alt="").reviewsList__preview
+					.reviewsList__texts 
+						.reviewsList__itemTitle NaGiBaToRzz
+						.reviewsList__itemText Что сказал капитан команды после победы. Что сказал капитан команды после...
+						.reviewsList__itemDate 03.10.2023

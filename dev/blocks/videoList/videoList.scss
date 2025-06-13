@@ -1,0 +1,22 @@
+.videoList__list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.videoList__item {
+	padding: 5px;
+	background-color: #1d1d1d;
+	border-radius: 25px;
+}
+
+.videoList__preview {
+	border-radius: 20px;
+}
+
+.videoList__itemTitle {
+	margin: 15px auto 15px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 100%;
+}

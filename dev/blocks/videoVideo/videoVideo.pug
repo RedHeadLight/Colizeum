@@ -1,0 +1,12 @@
+mixin videoVideo(modificator, extraClasses)
+	- classList = 'videoVideo'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' videoVideo--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList) 
+		img.videoVideo__preview(src="https://placehold.jp/914x518.png", alt="")

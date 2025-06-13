@@ -1,0 +1,12 @@
+mixin search(modificator, extraClasses)
+	- classList = 'search'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' search--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	form(class=classList action="#") 
+		input.search__input.instruction__input(name="search" type="search" aria-label="Введите запрос" placeholder="Например: Как привязать Faceit") 

@@ -1,0 +1,17 @@
+.backButton {
+	display: flex;
+	gap: 5.5px;
+	align-items: center;
+	color: $yellow;
+	font-family: $ttc;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 110%;
+	width: 125px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.backButton svg {
+	flex-shrink: 0;
+}

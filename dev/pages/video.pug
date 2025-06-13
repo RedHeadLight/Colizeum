@@ -1,0 +1,16 @@
+extends ../layouts/main.pug
+
+block variables 
+	- var title = 'Видео-обучение'
+
+block content
+	article.video
+		.container.container.video__container
+			include ../blocks/backButton/backButton.pug
+			+backButton([])
+
+			include ../blocks/pageHeading/pageHeading.pug
+			+pageHeading([], 'video__heading', 'Видео-обучение')
+
+			include ../blocks/videoVideo/videoVideo.pug
+			+videoVideo([])

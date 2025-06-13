@@ -1,0 +1,115 @@
+extends ../layouts/main.pug
+
+block variables 
+	- var title = 'Карта сайта'
+
+block content
+	.sitemap
+		.sitemap__block
+			ul
+				li
+					a(href="front.html") -Главная
+				li
+					a(href="stream.html") Стримы
+				li
+					a(href="news.html") Новости
+				li
+					a(href="reglaments.html") Регламенты
+				li
+					a(href="reviews.html") Отзывы
+				li
+					a(href="instruction.html") Инструкции по участию
+				li
+					a(href="video.html") Видео-обучение
+				li
+					a(href="clubs.html") -Клубы
+				li
+					a(href="winners.html") -Наши победители
+				li
+					a(href="news-page.html") -Новость
+				li
+					a(href="raiting.html") -Рейтинг игроков
+				li
+					a(href="tournament.html") -Название турнира
+				li
+					a(href="partner-search.html") -Найти напарника
+				li
+					a(href="profile.html") -Карточка игрока
+				li
+					a(href="history.html") -История турниров
+				li
+					a(href="lk.html") -Данные об аккаунте
+				li
+					a(href="club.html") -Клуб
+
+
+
+	style.
+		@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+		
+		body {
+			background: #fff;
+		}
+		.sitemap {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 5%;
+			width: 100%;
+			max-width: 1300px;
+			padding: 50px;
+			margin: 0 auto;
+			font-family: "Raleway", Arial, sans-serif;
+		}
+		
+		.sitemap__block {
+			margin-bottom: 40px;
+		}
+
+		@media(min-width: 1024px){
+			.sitemap__block {
+				width: 30%;
+			}
+		}
+		
+		.sitemap__block--full {
+			width: 100%;
+		}
+		
+		.sitemap__heading {
+			margin: 0 0 25px;
+		}
+		
+		.sitemap__list {
+			list-style: initial;
+		}
+		
+		.sitemap li+li {
+			margin-top: 10px;
+		}
+		
+		.sitemap a {
+			text-decoration: none;
+			color: #000;
+			font-size: 16px;
+		}
+		
+		.sitemap a:hover {
+			text-decoration: underline;
+		}
+		
+		.sitemap span {
+			display: block;
+			font-size: 16px;
+			margin-top: 5px;
+			color: #000;
+			padding: 4px 0 4px 10px;
+			border-left: 3px solid #000;
+		}
+		
+		.new {
+			color: red !important;
+		}
+		
+		.del {
+			text-decoration: line-through !important;
+		}

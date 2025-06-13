@@ -1,0 +1,16 @@
+extends ../layouts/main.pug
+
+block variables 
+	- var title = 'Регламенты'
+
+block content
+	article.reglaments
+		.container.container--wide.reglaments__container
+			include ../blocks/pageHeading/pageHeading.pug
+			+pageHeading([], 'reglaments__heading', 'Регламенты')
+
+			include ../blocks/_reglamentsFilter/_reglamentsFilter.pug
+			+_reglamentsFilter([], 'reglaments__filter')
+
+			include ../blocks/reglamentsList/reglamentsList.pug
+			+reglamentsList([], 'reglaments__reglaments', 12)

@@ -1,0 +1,46 @@
+.reviewsList__list {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+}
+
+.reviewsList__item {
+	padding: 20px 19px;
+	border-radius: 25px;
+	background-color: #101010;
+	text-decoration: none;
+	color: $white;
+	border: 1px solid #ffffff40;
+}
+
+.reviewsList__preview {
+	border-radius: 100px;
+	margin-bottom: 27px;
+}
+
+.reviewsList__texts {
+	display: grid;
+	gap: 18px;
+}
+
+.reviewsList__itemTitle {
+	font-family: $tt;
+	font-weight: 700;
+	line-height: 100%;
+	font-size: 20px;
+}
+
+.reviewsList__itemText {
+	font-family: $neue;
+	font-size: 16px;
+	line-height: 114%;
+	font-weight: 500;
+}
+
+.reviewsList__itemDate {
+	font-family: $inter;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 150%;
+	color: $yellow;
+}

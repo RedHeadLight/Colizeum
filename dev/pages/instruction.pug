@@ -1,0 +1,22 @@
+extends ../layouts/main.pug
+
+block variables 
+	- var title = 'Инструкция по участию'
+
+block content
+	article.instructions
+		.container.container--wide.instructions__container
+			include ../blocks/pageHeading/pageHeading.pug
+			+pageHeading([], 'instructions__heading', 'Инструкция по участию')
+
+			include ../blocks/_instructionFilter/_instructionFilter.pug
+			+_instructionFilter([], 'instruction__filter')
+
+			include ../blocks/search/search.pug
+			+search([], 'instruction__search')
+
+			include ../blocks/instructionList/instructionList.pug
+			+instructionList([], 'instructions__instructions', 9)
+
+			include ../blocks/scrollUp/scrollUp.pug
+			+scrollUp([], 'instructions__scrollUp')

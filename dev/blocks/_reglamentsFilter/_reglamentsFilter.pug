@@ -1,0 +1,11 @@
+mixin _reglamentsFilter(modificator, extraClasses)
+	- classList = 'filter'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' filter--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList style="border: 1px solid red; padding: 20px 0; text-align: center;") Фильтр регламентов

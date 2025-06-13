@@ -1,0 +1,26 @@
+$desktopWide: 1410px;
+$desktopMedium: 1178px;
+$desktop: 944px;
+
+$containerWide: 1410px;
+$containerMedium: 1178px;
+$container: 944px;
+$containerPadding: 15px;
+
+$neue: "Helvetica Neue", Arial, sans-serif;
+$tt: "TT Squares", Arial, sans-serif;
+$ttc: "TT Squares Condensed", Arial, sans-serif;
+$inter: "Inter", Arial, sans-serif;
+$helvetica: "Helvetica", Arial, sans-serif;
+
+$yellow: var(--yellow);
+$grey: var(--grey);
+$black: var(--black);
+$white: var(--white);
+
+:root {
+	--yellow: #fff566;
+	--grey: #1d1d1d;
+	--black: #000000;
+	--white: #ffffff;
+}

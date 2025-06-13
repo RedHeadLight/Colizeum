@@ -1,0 +1,34 @@
+.tabsList__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.tabsList__item {
+	border: 1px solid $yellow;
+	padding: 18px;
+	font-family: $ttc;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 1;
+	text-transform: uppercase;
+	color: $yellow;
+	background-color: $black;
+	text-align: center;
+	min-width: 280px;
+
+	&:first-child {
+		border-top-left-radius: 12px;
+		border-bottom-left-radius: 12px;
+	}
+
+	&:last-child {
+		border-top-right-radius: 12px;
+		border-bottom-right-radius: 12px;
+	}
+
+	&--active {
+		color: $black;
+		background-color: $yellow;
+	}
+}

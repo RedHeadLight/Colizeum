@@ -1,0 +1,17 @@
+mixin tabsList(modificator, extraClasses, list)
+	- classList = 'tabsList'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' tabsList--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList) 
+		.tabsList__list 
+			for i, index in list
+				if index == 0
+					button(type='button').tabsList__item.tabsList__item--active #{i}
+				else
+					button(type='button').tabsList__item #{i}

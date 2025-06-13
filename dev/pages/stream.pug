@@ -1,0 +1,17 @@
+extends ../layouts/main.pug
+
+block variables 
+	- var title = 'Стримы'
+
+block content
+	article.stream
+		.container.stream__container
+			include ../blocks/pageHeading/pageHeading.pug
+			+pageHeading([], 'stream__heading', 'Стримы')
+
+			include ../blocks/videoList/videoList.pug
+			+videoList([], 'stream__videos', 8)
+
+			include ../blocks/scrollUp/scrollUp.pug
+			+scrollUp([], 'stream__scrollUp')
+

@@ -1,0 +1,18 @@
+mixin videoList(modificator, extraClasses, count)
+	- classList = 'videoList'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' videoList--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList)
+		.videoList__list
+			- var i = 0
+			while i < count
+				- i = i + 1
+				.videoList__item 
+					img(src="https://placehold.jp/436x275.png", alt="").videoList__preview
+					.videoList__itemTitle NAVI vs Virtus Pro / Grand Final

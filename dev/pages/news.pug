@@ -1,0 +1,20 @@
+extends ../layouts/main.pug
+
+block variables 
+	- var title = 'Новости'
+
+block content
+	article.news
+		.container.news__container
+			include ../blocks/pageHeading/pageHeading.pug
+			+pageHeading([], 'news__heading', 'Новости')
+
+			include ../blocks/tabsList/tabsList.pug
+			+tabsList([], 'news__tabs', ['Турниры Colizeum', 'Всемирный киберспорт', 'Статьи'])
+
+			include ../blocks/newsList/newsList.pug
+			+newsList([], 'news__news', 9)
+
+			include ../blocks/scrollUp/scrollUp.pug
+			+scrollUp([], 'news__scrollUp')
+

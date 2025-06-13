@@ -1,0 +1,17 @@
+mixin loadMore(modificator, extraClasses)
+	- classList = 'loadMore'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' loadMore--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	a(href="#" class=classList) Загрузить еще
+		<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6.5 0.4375V12.5625" stroke="black" stroke-width="3"/>
+			<path d="M0.4375 6.5L12.5625 6.5" stroke="black" stroke-width="3"/>
+		</svg>
+
+		

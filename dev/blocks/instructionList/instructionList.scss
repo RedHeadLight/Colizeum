@@ -1,0 +1,71 @@
+.instructionList {
+	margin-top: 50px;
+}
+
+.instructionList__list {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+}
+
+.instructionList__item {
+	padding: 5px;
+	border-radius: 25px;
+	background-color: #101010;
+	text-decoration: none;
+	color: $white;
+}
+
+.instructionList__previewLink {
+	display: block;
+}
+
+.instructionList__preview {
+	border-radius: 20px;
+	display: block;
+}
+
+.instructionList__texts {
+	padding: 15px;
+	display: grid;
+	gap: 10px;
+}
+
+.instructionList__itemTitleLink {
+	text-decoration: none;
+	color: $white;
+}
+
+.instructionList__itemTitle {
+	font-family: $tt;
+	font-weight: 700;
+	line-height: 100%;
+	font-size: 20px;
+}
+
+.instructionList__itemText {
+	font-family: $neue;
+	font-size: 16px;
+	line-height: 114%;
+	font-weight: 500;
+}
+
+.instruction__itemLink {
+	width: 147px;
+	background-color: $white;
+	color: $black;
+	font-family: $ttc;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 150%;
+	border-radius: 26px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+	padding: 9px 10px 9px 15px;
+}
+
+.instruction__itemLink:hover {
+	background-color: $yellow;
+}

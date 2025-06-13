@@ -1,0 +1,16 @@
+extends ../layouts/main.pug
+
+block variables 
+	- var title = 'Отзывы'
+
+block content
+	article.reviews
+		.container.container--wide.reviews__container
+			include ../blocks/pageHeading/pageHeading.pug
+			+pageHeading([], 'reviews__heading', 'Отзывы')
+
+			include ../blocks/reviewsList/reviewsList.pug
+			+reviewsList([], 'reviews__reviews', 9)
+
+			include ../blocks/loadMore/loadMore.pug
+			+loadMore([], 'reviews__loadMore')

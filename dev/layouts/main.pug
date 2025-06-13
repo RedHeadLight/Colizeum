@@ -1,0 +1,22 @@
+block variables
+
+doctype
+html(lang="ru")
+	include ../blocks/_head/_head.pug
+	+head(title)
+
+	body
+		include ../blocks/header/header.pug
+		+header()
+
+		main
+			block content
+		
+		include ../blocks/footer/footer.pug
+		+footer()
+
+
+		include ../blocks/_helpers/_scripts.pug
+		include ../blocks/_helpers/_styles.pug
+		+styles('plugins.min')
+		+scripts('plugins.min', 'main.min')
