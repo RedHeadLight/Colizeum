@@ -1,0 +1,141 @@
+.profileList {
+	display: block;
+	margin-top: 20px;
+	border-collapse: collapse;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.profileList {
+	tr + tr {
+		border-top: 1px solid #5A5A5A;
+	}
+
+	th, td {
+		&:nth-child(1){width: 157px;}
+		&:nth-child(2){width: 213px;}
+		&:nth-child(3){width: 88px;}
+		&:nth-child(4){width: 435px;}
+	}
+}
+
+.profileList__headCell {
+	font-weight: 400;
+	font-family: $tt;
+	font-size: 14px;
+	line-height: 97%;
+	text-transform: uppercase;
+	text-align: center;
+	color: $white;
+	background-color: #282828;
+	padding: 23px 16px;
+
+	&--date {
+		text-align: left;
+	}
+
+	&--discipline {
+		padding: 23px 20px;
+		background-color: #3E3E3E;
+	}
+
+	&--place {
+		color: $yellow;
+	}
+
+	&--sum {
+		background-color: #3E3E3E;
+	}
+}
+
+.profileList__cell {
+	font-family: $tt;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 97%;
+	color: $white;
+	background-color: #222222;
+	padding: 11px 15px;
+
+	&--date {
+		padding-left: 20px;
+		padding-right: 20px;
+		position: relative;
+	}
+
+	&--discipline {
+		font-weight: 400;
+		font-family: $neue;
+		font-size: 16px;
+
+		img {
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+	}
+
+	&--place {
+		font-family: $tt;
+		font-weight: 400;
+		text-align: center;
+		text-transform: uppercase;
+		color: $yellow;
+		background-color: #282828;
+	}
+
+	&--sum {
+		font-family: $neue;
+		font-weight: 400;
+		font-size: 14px;
+		padding-left: 20px;
+		padding-right: 20px;
+
+		b {
+			color: $yellow;
+		}
+	}
+}
+
+.profileList__item {
+	&:nth-child(1), &:nth-child(2), &:nth-child(3) {
+		.profileList__cell--date::before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			width: 4px;
+			height: 100%;
+		}
+	}
+
+	&:nth-child(1) {
+		.profileList__cell--date {
+			background-color: #45442B;
+
+			&::before{background-color: #FFF566;}
+		}
+		.profileList__cell--discipline {background-color: #4F4E31;}
+		.profileList__cell--place {background-color: #656440;}
+		.profileList__cell--sum {background-color: #464538;}
+	}
+	&:nth-child(2) {
+		.profileList__cell--date {
+			background-color: #3E3E3E;
+
+			&::before{background-color: $white;}
+		}
+		.profileList__cell--discipline {background-color: #5A5A5A;}
+		.profileList__cell--place {background-color: #626262;}
+		.profileList__cell--sum {background-color: #3E3E3E;}
+	}
+	&:nth-child(3) {
+		.profileList__cell--date {
+			background-color: #2A2019;
+
+			&::before{background-color: #FF7C48;}
+		}
+		.profileList__cell--discipline {background-color: #482420;}
+		.profileList__cell--place {background-color: #572E29;}
+		.profileList__cell--sum {background-color: #2A2019;}
+	}
+}

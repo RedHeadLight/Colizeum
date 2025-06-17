@@ -1,0 +1,26 @@
+extends ../layouts/main.pug
+
+block variables 
+	- var title = 'Карточка игрока'
+
+block content
+	article.profile
+		.container.container.profile__container
+			include ../blocks/backButton/backButton.pug
+			+backButton([], '', 'Вернуться к рейтингу')
+
+			include ../blocks/partnerList/partnerList.pug
+			+partnerList([], 'profile__player', 1)
+
+			.profile__wrapper 
+				include ../blocks/pageHeading/pageHeading.pug
+				+pageHeading(['left', 'small'], 'profile__heading', 'Карточка игрока')
+
+				include ../blocks/_profileFilter/_profileFilter.pug
+				+_profileFilter([], 'profile__filter')
+					
+				include ../blocks/profileList/profileList.pug
+				+profileList([], 'profile__table', 28)
+
+			include ../blocks/scrollUp/scrollUp.pug
+			+scrollUp([], 'profile__scrollUp')
