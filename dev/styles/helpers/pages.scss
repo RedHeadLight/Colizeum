@@ -23,3 +23,25 @@
 	padding: 5px 24px 20px;
 	border-radius: 35px;
 }
+
+.rating__wrapper {
+	display: flex;
+	justify-content: space-between;
+	gap: 50px;
+}
+
+.reviews__loadMore {
+	margin: 40px auto 96px;
+}
+
+.rating__loadMore {
+	margin: 0;
+}
+
+.partner__search {
+	margin-bottom: 18px;
+}
+
+.partner__filter {
+	margin-bottom: 18px;
+}

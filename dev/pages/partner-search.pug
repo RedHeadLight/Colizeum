@@ -1,0 +1,24 @@
+extends ../layouts/main.pug
+
+block variables 
+	- var title = 'Найти напарника'
+
+block content
+	article.partner
+		.container.partner__container
+			include ../blocks/pageHeading/pageHeading.pug
+			+pageHeading([], 'partner__heading', 'Найти напарника')
+
+			
+			include ../blocks/search/search.pug
+			+search([], 'partner__search', 'Поиск по никнейму')
+
+			include ../blocks/_partnerFilter/_partnerFilter.pug
+			+_partnerFilter([], 'partner__filter')
+
+			include ../blocks/partnerList/partnerList.pug
+			+partnerList([], 'partner__list', 5)
+
+			include ../blocks/scrollUp/scrollUp.pug
+			+scrollUp([], 'partner__scrollUp')
+

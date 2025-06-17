@@ -1,0 +1,134 @@
+.ratingList {
+	display: block;
+	margin-bottom: 30px;
+	margin-top: 20px;
+	border-collapse: collapse;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.ratingList {
+	th, td {
+		&:nth-child(1){width: 63px;}
+		&:nth-child(2){width: 517px;}
+		&:nth-child(3){width: 200px;}
+		&:nth-child(4){width: 200px;}
+		&:nth-child(5){width: 400px;}
+	}
+}
+
+.ratingList__headCell {
+	&--icon {
+		background-color: #3E3E3E;
+	}
+	&--nickname {
+		font-weight: 400;
+		font-family: $tt;
+		font-size: 14px;
+		line-height: 97%;
+		padding: 23px 20px;
+		background-color: #3E3E3E;
+		color: $yellow;
+		text-transform: uppercase;
+		text-align: left;
+		padding-left: 20px;
+
+		 b {
+			color: $yellow;
+		 }
+	}
+
+	&--rate {
+		font-family: $tt;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 97%;
+		color: $yellow;
+		padding: 23px 55px;
+		border-bottom: 1px solid #3E3E3E;
+		text-transform: uppercase;
+		background-color: #282828;
+	}
+
+	&--tournaments {
+		font-family: $tt;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 97%;
+		text-transform: uppercase;
+		padding: 14px 42px;
+		border-bottom: 1px solid #3E3E3E;
+		background-color: #282828;
+		text-align: center;
+	}
+
+	&--won {
+		font-family: $tt;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 97%;
+		text-align: center;
+		text-transform: uppercase;
+		color: $white;
+		padding: 23px 20px;
+		border-top-right-radius: 20px;
+		background-color: #3E3E3E;
+	}
+}
+
+.ratingList__cell {
+	&--icon {
+		background-color: #282828;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 63px;
+	}
+
+	&--nickname {
+		font-weight: 400;
+		font-family: $tt;
+		font-size: 14px;
+		line-height: 97%;
+		padding: 23px 20px;
+		background-color: #3E3E3E;
+		color: $white;
+		padding-left: 20px;
+
+		b {
+			color: $yellow;
+		}
+	}
+
+	&--rate {
+		font-family: $tt;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 97%;
+		text-align: center;
+		text-transform: uppercase;
+		color: $yellow;
+	}
+
+	&--tournaments {
+		font-family: $tt;
+		color: $white;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 97%;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&--won {
+		font-family: $neue;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 97%;
+		padding-left: 20px;
+
+		b {
+			color: $yellow;
+		}
+	}
+}

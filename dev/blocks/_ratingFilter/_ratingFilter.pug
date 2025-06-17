@@ -1,0 +1,11 @@
+mixin _ratingFilter(modificator, extraClasses)
+	- classList = '_ratingFilter'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' _ratingFilter--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList style="border: 1px solid red; padding: 20px 0; text-align: center;") Фильтр инструкций

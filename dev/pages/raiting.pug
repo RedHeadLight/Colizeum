@@ -1,0 +1,26 @@
+extends ../layouts/main.pug
+
+block variables 
+	- var title = 'Рейтинг игроков'
+
+block content
+	article.rating
+		.container.container--wide.rating__container
+			include ../blocks/pageHeading/pageHeading.pug
+			+pageHeading([], 'rating__heading', 'Рейтинг игроков')
+
+			include ../blocks/_ratingFilter/_ratingFilter.pug
+			+_ratingFilter([], 'rating__filter')
+
+			include ../blocks/ratingList/ratingList.pug
+			+ratingList([], 'rating__rating', 28)
+
+			.rating__wrapper 
+				include ../blocks/showAs/showAs.pug
+				+showAs([], 'rating__showAs')
+
+				include ../blocks/loadMore/loadMore.pug
+				+loadMore([], 'rating__loadMore')
+
+			include ../blocks/scrollUp/scrollUp.pug
+			+scrollUp([], 'rating__scrollUp')

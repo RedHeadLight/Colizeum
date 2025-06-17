@@ -1,0 +1,16 @@
+mixin showAs(modificator, extraClasses)
+	- classList = 'showAs'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' showAs--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList) 
+		span.showAs__heading Показывать:
+		.showAS__wrapper 
+			button(type="button").showAs__button.showAs__button--current 10
+			button(type="button").showAs__button 50
+			button(type="button").showAs__button 100

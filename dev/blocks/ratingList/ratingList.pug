@@ -1,0 +1,35 @@
+mixin ratingList(modificator, extraClasses, count)
+	- classList = 'ratingList'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' ratingList--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	table(class=classList) 
+		thead.ratingList__heading 
+			tr
+				th.ratingList__headCell.ratingList__headCell--icon
+				th.ratingList__headCell.ratingList__headCell--nickname никнейм
+				th.ratingList__headCell.ratingList__headCell--rate Win Rate
+				th.ratingList__headCell.ratingList__headCell--tournaments Участий в&nbsp;турнирах
+				th.ratingList__headCell.ratingList__headCell--won Сумма выигранных призовых
+		tbody.ratingList__list
+			- var i = 0
+			while i < count
+				- i = i + 1
+				tr.ratingList__item
+					td.ratingList__cell.ratingList__cell--icon
+						img(src="https://placehold.jp/33x33.png", alt="").ratingList__icon
+					td.ratingList__cell.ratingList__cell--nickname madeonPrOkillaaz 
+						b (ViVI)
+					td.ratingList__cell.ratingList__cell--rate 22%
+					td.ratingList__cell.ratingList__cell--tournaments 15
+					td.ratingList__cell.ratingList__cell--won 
+						b 168 980₽ 
+						| и 
+						b 120 000₽ 
+						| на игровой баланс
+

@@ -1,0 +1,154 @@
+.partnerList {
+	display: block;
+	border-radius: 30px;
+}
+
+.partnerList__wrapper {
+	padding: 13px 10px;
+	border-radius: 35px;
+	background:
+		linear-gradient(180deg,#000 0%, #000 100%),
+		radial-gradient(39.53% 100% at 50% 0%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 17.79%, rgba(255, 247, 132, 0.6) 40.38%, rgba(255, 255, 255, 0.06) 100%);
+	background-size: 100% calc(100% - 2px), 100% 100%;
+	background-position: center center;
+    background-repeat: no-repeat;
+	border: 1px solid #1D1D1D;
+
+	& + & {
+		margin-top: 18px;
+	}
+}
+.partnerList__item {
+	text-decoration: none;
+	padding: 21px 20px;
+	background-color: $grey;
+	border-radius: 30px;
+}
+
+.partnerList__header {
+	display: flex;
+	gap: 21px;
+	margin-bottom: 10px;
+}
+
+.partnerList__avatar {
+	border-radius: 11px;
+}
+
+.partnerList__headerTexts {
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 90%;
+	color: $white;
+	font-family: $neue;
+}
+
+.partnerList__headerText b {
+	color: $yellow;
+}
+
+.partnerList__headerStatus {
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 150%;
+	color: $black;
+	background-color: $yellow;
+	font-family: $neue;
+	gap: 3px;
+	display: flex;
+	align-items: center;
+	border-radius: 21px;
+	padding: 3px 10px 3px 6px;
+	width: 155px;
+	margin-top: 17px;
+}
+
+.partnerList__rang {
+	margin-left: auto;
+}
+
+
+.partnerList__main {
+	display: flex;
+	gap: 14px;
+	margin-bottom: 10px;
+}
+
+.partnerList__total {
+	min-width: 140px;
+	padding: 15px 0;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	align-items: center;
+	border-radius: 15px;
+	border: 1px solid #383838;
+	text-align: center;
+
+	&--tournaments,
+	&--prizes {
+		min-width: 175px;
+	}
+
+	&--won {
+		background: url('../assets/partnerList__total.png') center center no-repeat, radial-gradient(133.51% 193.33% at 74.16% -74.07%, #191300 46.61%, #463500 63.17%, #93852B 80.77%, #FFF34A 100%);
+		background-size: cover;
+		flex-grow: 1;
+	}
+}
+
+.partnerList__num {
+	font-family: $ttc;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 150%;
+	color: $yellow;
+}
+
+.partnerList__text, .partnerList__wonText {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 110%;
+	color: $white;
+	font-family: $neue;
+	max-width: 205px;
+
+	b {
+		color: $yellow;
+	}
+}
+
+
+.partnerList__contactsWrapper {
+	margin-bottom: 28px;
+}
+
+.partnerList__contactsHeading {
+	display: block;
+	font-family: $tt;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 97%;
+	color: $yellow;
+	margin-bottom: 10px;
+}
+
+.partnerList__contactsText {
+	font-family: $neue;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	color: $white;
+}
+
+.partnerList__socials {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+}
+
+.partnerList__social {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+}

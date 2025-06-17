@@ -1,0 +1,36 @@
+.showAs {
+	display: block;
+	margin-right: auto;
+}
+
+.showAs__heading {
+	font-weight: 500;
+	font-family: $neue;
+	font-size: 14px;
+	line-height: 150%;
+	color: $white;
+	margin-bottom: 13px;
+}
+
+.showAS__wrapper {
+	display: flex;
+	gap: 5px;
+}
+
+.showAs__button {
+	border-radius: 100%;
+	border: none;
+	background-color: $grey;
+	width: 40px;
+	height: 40px;
+	color: $yellow;
+	font-family: $ttc;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 150%;
+}
+
+.showAs__button--current {
+	background-color: $yellow;
+	color: $black;
+}
