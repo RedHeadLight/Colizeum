@@ -1,0 +1,65 @@
+.lkForm__inputBlock {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	font-family: $neue;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 150%;
+	color: $white;
+}
+
+.lkFormInput__input {
+	background-color: $black;
+	border-radius: 12px;
+	padding: 20px 15px;
+	border: none;
+	color: #7E7E7E;
+}
+
+.lkFormInput__labelWrapper {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	position: relative;
+}
+
+.lkFormInput__labelWrapper:has(.lkFormInput__checkboxLabel input:checked) .lkFormInput__checkboxMark::after {
+	background-color: $yellow;
+}
+
+.lkFormInput__checkboxLabel span:not(.lkFormInput__checkboxMark) {
+	margin-right: 33px;
+}
+
+.lkFormInput__checkboxMark {
+	position: relative;
+}
+
+.lkFormInput__checkboxMark::before {
+	width: 24px;
+	height: 24px;
+	border-radius: 100%;
+	background-color: $black;
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.lkFormInput__checkboxMark::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+}
+
+.lkFormInput__input--textarea {
+	min-height: 100px;
+	resize: none;
+}

@@ -1,0 +1,172 @@
+.profileCard__card {
+
+}
+
+.profileCard__wrapper {
+	padding: 13px 10px;
+	border-radius: 35px;
+	background:
+		linear-gradient(180deg,#000 0%, #000 100%),
+		radial-gradient(39.53% 100% at 50% 0%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 17.79%, rgba(255, 247, 132, 0.6) 40.38%, rgba(255, 255, 255, 0.06) 100%);
+	background-size: 100% calc(100% - 2px), 100% 100%;
+	background-position: center center;
+    background-repeat: no-repeat;
+	border: 1px solid #1D1D1D;
+
+	& + & {
+		margin-top: 18px;
+	}
+}
+
+
+.profileCard__header {
+	display: grid;
+    grid-template-columns: 95px 1fr;
+	background-color: #1D1D1D;
+	border-radius: 30px;
+	margin-bottom: 10px;
+	padding: 20px;
+}
+
+.profileCard__avatar {
+	border-radius: 11px;
+}
+
+.profileCard__headerTexts {
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 90%;
+	color: $white;
+	font-family: $neue;
+	margin-left: 21px;
+}
+
+.profileCard__headerText b {
+	color: $yellow;
+}
+
+.profileCard__headerIcons {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.profileCard__headerRating {
+	display: flex;
+	gap: 3px;
+	align-items: center;
+	font-family: $inter;
+	font-weight: 600;
+	font-size: 12px;
+	color: $yellow;
+	line-height: 150%;
+}
+
+.profileCard__headerStatus {
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 150%;
+	color: $black;
+	background-color: $yellow;
+	font-family: $neue;
+	gap: 3px;
+	display: flex;
+	align-items: center;
+	border-radius: 21px;
+	padding: 3px 10px 3px 6px;
+	width: 155px;
+}
+
+.profileCard__headerBalance {
+	font-family: $neue;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 150%;
+	color: #7E7E7E;
+	display: grid;
+}
+
+.profileCard__headerBalance b {
+	font-family: $inter;
+	font-weight: 700;
+	font-size: 34px;
+	line-height: 150%;
+	color: $yellow;
+}
+
+.profileCard__contacts {
+	grid-column: 1 / -1;
+}
+
+.profileCard__contactsWrapper {
+	margin-bottom: 28px;
+}
+
+.profileCard__contactsHeading {
+	display: block;
+	font-family: $tt;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 97%;
+	color: $yellow;
+	margin-bottom: 10px;
+}
+
+.profileCard__contactsText {
+	font-family: $neue;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	color: $white;
+}
+
+.profileCard__socials {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+	margin-top: 31px;
+	grid-column: 1/-1;
+}
+
+.profileCard__social {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+	text-decoration: none;
+	color: $white;
+	background-color: #FFFFFF1A;
+	padding: 5px 8px 5px;
+	border-radius: 16px;
+	font-family: $tt;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 150%;
+	text-transform: uppercase;
+}
+
+.profileCard__btns {
+	display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profileCard__btn {
+	font-family: $tt;
+	color: $white;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 110%;
+	text-decoration: none;
+	text-align: center;
+	padding: 15px;
+	width: 100%;
+	background-color: #1D1D1D;
+	border-radius: 14px;
+}
+
+.profileCard__btn--colored {
+	background-color: $yellow;
+	color: $black;
+}

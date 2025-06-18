@@ -61,3 +61,49 @@
 	padding-left: 17px;
 	padding-right: 17px;
 }
+
+.lk__container {
+	display: grid;
+	grid-template-columns: 423px 1fr;
+	gap: 32px;
+	padding-bottom: 52px;
+}
+
+.lk__wrapper {
+	display: grid;
+	gap: 10px;
+	align-self: flex-start;
+}
+
+.lk__cover {
+	padding: 20px 31px 83px;
+	background-color: #1D1D1D;
+	border-radius: 35px;
+}
+
+.lk__heading {
+	margin-bottom: 15px;
+}
+
+.lk__formBlockHeading {
+	margin: 0 0 38px;
+	font-family: $neue;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 100%;
+	color: $white;
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.lk__formWrapper {
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+	gap: 19px;
+}
+
+.lk__formBlock {
+	display: grid;
+	gap: 15px;
+}

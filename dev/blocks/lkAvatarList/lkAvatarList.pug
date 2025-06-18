@@ -1,0 +1,29 @@
+mixin lkAvatarList(modificator, extraClasses)
+	- classList = 'lkAvatarList'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' lkAvatarList--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList) 
+		.lkAvatarList__list
+			label.lkAvatarList__item
+				input(type="radio" name="avatar_image" value="0" checked).lkAvatarList__radio.visually-hidden
+				img(src="https://placehold.jp/95x95.png", alt="").lkAvatarList__avatar
+
+			- var i = 1
+			while i < 4
+				- i = i + 1
+				label.lkAvatarList__item
+					input(type="radio" name="avatar_image" value=i).lkAvatarList__radio.visually-hidden
+					img(src="https://placehold.jp/95x95.png", alt="").lkAvatarList__avatar
+
+			label.lkAvatarList__item.lkAvatarList__item--new
+				input(type="file" name="avatar__new").visually-hidden
+				<svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M2.58691 2.5459L2.58691 9.35059L14.4131 9.35059L14.4131 2.5459L16.5 2.5459L16.5 11.5L0.5 11.5L0.5 2.5459L2.58691 2.5459ZM7.79492 4.88281L7.79492 0.5L9.5166 0.5L9.5166 4.88281L12.2891 2.02734L12.2891 4.53516L9.26367 7.64941L8.65527 8.27637L8.04687 7.64941L5.02148 4.53516L5.02148 2.02734L7.79492 4.88281Z" fill="white"/>
+				</svg>
+				span Загрузить фото

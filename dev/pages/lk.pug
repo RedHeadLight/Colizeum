@@ -1,0 +1,144 @@
+extends ../layouts/main.pug
+
+block variables 
+	- var title = 'Данные об аккаунте'
+
+block content
+	article.lk
+		.container.container--wide.lk__container
+			.lk__wrapper 
+				include ../blocks/backButton/backButton.pug
+				+backButton([], '', 'Выйти')
+
+				include ../blocks/profileCard/profileCard.pug
+				+profileCard([], 'profile__card')
+
+			form(action="#").lk__cover
+				include ../blocks/pageHeading/pageHeading.pug
+				+pageHeading(['small', 'left'], 'lk__heading', 'Данные об аккаунте')
+
+				include ../blocks/lkAvatarList/lkAvatarList.pug
+				+lkAvatarList([], 'lkAvatar__list')
+				
+				include ../blocks/lkFormInput/lkFormInput.pug
+				.lk__formWrapper
+					.lk__formBlock 
+						h2.lk__formBlockHeading Личная информация
+						-
+							var inputs = [
+								{
+									'label': 'ФИО',
+									'placeholder': 'Петров Петр Астаффурлаевич',
+									'type': 'text',
+									'name': 'fullname'},
+								{
+									'label': 'Серия и номер паспорта',
+									'placeholder': '7614 679925',
+									'type': 'text',
+									'name': 'passport',
+								},
+								{
+									'label': 'Дата рождения',
+									'placeholder': '19.04.2001',
+									'type': 'date',
+									'name': 'birthday',
+								},
+								{
+									'label': 'Выдан когда',
+									'placeholder': '19.04.2001',
+									'type': 'date',
+									'name': 'passport_date',
+								},
+								{
+									'label': 'Выдан кем',
+									'placeholder': 'МВД Москва № 1288120 по Московской области',
+									'type': 'textarea',
+									'name': 'passport_where',
+								},
+								{
+									'label': 'E-mail',
+									'placeholder': 'tarkovskiy@mail.ru',
+									'type': 'email',
+									'name': 'email',
+								}
+							]
+
+						for i in inputs
+							+lkFormInput(
+								[], 
+								'lkForm__inputBlock',
+								i.label,
+								i.placeholder,
+								i.type,
+								i.name
+							)
+
+					.lk__formBlock 
+						h2.lk__formBlockHeading Публичные данные
+						-
+							var inputs = [
+								{
+									'label': 'Команда',
+									'placeholder': 'Петров Петр Астаффурлаевич',
+									'type': 'text',
+									'name': 'team',
+									'checkboxLabel': 'Показывать в профиле',
+									'checkboxName': 'show_fullname',
+								},
+								{
+									'label': 'Клуб',
+									'placeholder': 'Россия, г. Москва, 1-я Владимирская',
+									'type': 'text',
+									'name': 'club',
+									'checkboxLabel': 'Показывать в профиле',
+									'checkboxName': 'show_club',
+								},
+								{
+									'label': 'Ссылка на Telegram',
+									'placeholder': 't.me/example',
+									'type': 'text',
+									'name': 'tg',
+									'checkboxLabel': 'Показывать в профиле',
+									'checkboxName': 'show_tg',
+								},
+								{
+									'label': 'Ссылка на Steam',
+									'placeholder': 'steam.com/example',
+									'type': 'text',
+									'name': 'steam',
+									'checkboxLabel': 'Показывать в профиле',
+									'checkboxName': 'show_steam',
+								},
+								{
+									'label': 'Ссылка на Faceit',
+									'placeholder': 'steam.com/example',
+									'type': 'text',
+									'name': 'faceit',
+									'checkboxLabel': 'Показывать в профиле',
+									'checkboxName': 'show_faceit',
+								},
+								{
+									'label': 'Комментарий',
+									'placeholder': 'Добавляйтесь в стим “example”, пишите в тг “@example”, еще есть аккаунт фейсит ник MAKS+100500',
+									'type': 'textarea',
+									'name': 'comment',
+									'checkboxLabel': 'Показывать в профиле',
+									'checkboxName': 'show_textarea',
+								}
+							]
+
+						for i in inputs
+							+lkFormInput(
+								[], 
+								'lkForm__inputBlock',
+								i.label,
+								i.placeholder,
+								i.type,
+								i.name,
+								i.checkboxLabel,
+								i.checkboxName
+							)
+
+				include ../blocks/saveBtn/saveBtn.pug
+				+saveBtn([], 'lk__saveBtn')
+

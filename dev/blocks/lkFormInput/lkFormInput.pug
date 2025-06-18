@@ -1,0 +1,25 @@
+mixin lkFormInput(modificator, extraClasses, label, placeholder, type, name, checkboxLabel, checkboxName)
+	- classList = 'lkFormInput'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' lkFormInput--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList)
+		.lkFormInput__labelWrapper
+			label(for=name).lkFormInput__label #{label}
+			
+			if checkboxLabel
+				label.lkFormInput__checkboxLabel
+					input(type="checkbox" name=checkboxName).visually-hidden
+					span #{checkboxLabel}
+					span.lkFormInput__checkboxMark
+
+
+		if type == 'textarea'
+			textarea(placeholder=placeholder name=name id=name).lkFormInput__input.lkFormInput__input--textarea
+		else
+			input(placeholder=placeholder type=type name=name id=name).lkFormInput__input
