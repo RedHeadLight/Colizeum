@@ -1,0 +1,30 @@
+extends ../layouts/main.pug
+
+block variables 
+	- var title = 'История турниров'
+
+block content
+	article.history
+		.container.container--wide.history__container
+			.history__wrapper 
+				include ../blocks/backButton/backButton.pug
+				+backButton([], '', 'Выйти')
+
+				include ../blocks/profileCard/profileCard.pug
+				+profileCard([], 'history__card')
+
+			.history__cover
+				.history__coverBody
+					.history__coverWrapper
+						include ../blocks/pageHeading/pageHeading.pug
+						+pageHeading(['left', 'small'], 'history__heading', 'История турниров')
+
+						include ../blocks/_historyFilter/_historyFilter.pug
+						+_historyFilter([], 'history__filter')
+
+					include ../blocks/profileList/profileList.pug
+					+profileList([], 'history__table', 28)
+
+
+				include ../blocks/scrollUp/scrollUp.pug
+				+scrollUp([], 'history__scrollUp')

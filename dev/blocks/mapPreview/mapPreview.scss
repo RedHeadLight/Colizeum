@@ -31,3 +31,11 @@
 	object-fit: cover;
 	display: block;
 }
+
+.mapPreview--active .mapPreview__preview {
+	height: 617px;
+}
+
+.mapPreview--active .mapPreview__btn {
+	display: none;
+}
