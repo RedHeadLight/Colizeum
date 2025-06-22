@@ -1,0 +1,22 @@
+
+.pageLabels__labels {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.pageLabels__label {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 73%;
+	color: $white;
+	font-family: $neue;
+	background-color: #FFFFFF4D;
+	border-radius: 34px;
+	padding: 7px 8px;
+}
+
+.pageLabels__label--primary {
+	background-color: $yellow;
+	color: $black;
+}

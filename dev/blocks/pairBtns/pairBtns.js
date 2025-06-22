@@ -1,0 +1,1 @@
+//.pareBtns scripts goes here

@@ -1,0 +1,11 @@
+mixin _frontFilter(modificator, extraClasses)
+	- classList = '_frontFilter'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' _frontFilter--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList style="border: 1px solid red; padding: 20px 0; text-align: center;") Фильтр рейтинга

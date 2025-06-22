@@ -1,0 +1,10 @@
+.feedBlock {
+	display: grid;
+	padding: 20px 20px 30px;
+	grid-template-columns: 294px 1fr;
+	gap: 142px;
+	justify-content: space-between;
+	border-radius: 35px;
+	background-color: #101010;
+}
+

@@ -1,0 +1,27 @@
+.pairBtns__btns{
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+}
+
+.pairBtns__btn {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	color: $white;
+	padding: 6px 6px 6px 20px;
+	gap: 8px;
+	border-radius: 27px;
+	background-color: #FFFFFF21;
+	justify-content: space-between;
+	min-width: 182px;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 150%;
+	font-family: $ttc;
+}
+
+.pairBtns__btn--primary {
+	background-color: $yellow;
+	color: $black;
+}

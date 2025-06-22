@@ -1,0 +1,14 @@
+mixin allNews(modificator, extraClasses)
+	- classList = 'allNews'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' allNews--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	a(href="#" class=classList) Все новости
+		<svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M0.726587 9.10549L7.17445 2.65763L1.53768 2.65763L4.01278 0.182531L10.1622 0.182531L11.3997 0.18253L11.3997 1.42008L11.3997 7.56946L8.92461 10.0446V4.40779L2.47675 10.8557L0.726587 9.10549Z" fill="black"/>
+		</svg>

@@ -1,0 +1,22 @@
+.allNews {
+	background-color: $white;
+	font-family: $ttc;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 150%;
+	text-transform: uppercase;
+	color: $black;
+	padding: 12px 10px;
+	text-decoration: none;
+	border-radius: 26px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	width: 144px;
+	gap: 8px;
+	position: sticky;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+}

@@ -1,0 +1,32 @@
+mixin pairBtns(modificator, extraClasses, first, second, useSecondSvg)
+	- classList = 'pairBtns'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' pairBtns--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList) 
+		.pairBtns__btns 
+			if first
+				a(href="#").pairBtns__btn.pairBtns__btn--primary #{first}
+					<svg width="38" height="37" viewBox="0 0 38 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="0.5" y="-0.000732422" width="37" height="37" rx="18.5" fill="white"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M13.2256 22.5232L19.6735 16.0753L14.0367 16.0753L16.5118 13.6002L22.6612 13.6002L23.8987 13.6002L23.8987 14.8378L23.8987 20.9871L21.4236 23.4622V17.8255L14.9758 24.2733L13.2256 22.5232Z" fill="black"/>
+					</svg>
+			
+			if second
+				a(href="#").pairBtns__btn #{second}
+					if useSecondSvg
+						<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6.24707 0.4375V12.5625" stroke="#FFEC69" stroke-width="3"/>
+							<path d="M0.18457 6.5L12.3096 6.5" stroke="#FFEC69" stroke-width="3"/>
+						</svg>
+					else
+						<svg width="38" height="37" viewBox="0 0 38 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="0.5" y="-0.000732422" width="37" height="37" rx="18.5" fill="#FFEC69"/>
+							<path d="M19 12.4368V24.5618" stroke="black" stroke-width="3"/>
+							<path d="M12.9375 18.4993L25.0625 18.4993" stroke="black" stroke-width="3"/>
+						</svg>

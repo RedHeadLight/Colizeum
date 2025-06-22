@@ -1,0 +1,39 @@
+mixin feedNews(modificator, extraClasses, count, isOnline)
+	- classList = 'feedNews'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' feedNews--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList) 
+		.feedNews__list
+			- var i = 0
+			while i < count
+				- i = i + 1
+				.feedNews__item 
+					.feedNews__itemWrapper 
+						span.feedNews__itemHeading PUBG 4x4 Pro Squad
+						.feedNews__itemDetails
+							.feedNews__itemDetail
+								span Призовой 
+								b 50 000₽
+							.feedNews__itemDetail
+								span Дата 
+								b 22.01.2025
+
+						include ../pairBtns/pairBtns.pug
+						+pairBtns([], 'feedNews__btns', 'зарегистрироваться', 'Подробнее', 'useSecondSvg')
+
+					.feedNews__imgWrapper 
+						img(src="https://placehold.jp/320x218.png", alt="")
+
+						if isOnline
+							span.feedNews__status.feedNews__status--online Online
+						else
+							span.feedNews__status Lan
+
+
+

@@ -1,0 +1,15 @@
+mixin pageLabels(modificator, extraClasses)
+	- classList = 'pageLabels'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' pageLabels--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList) 
+		.pageLabels__labels 
+			span.pageLabels__label.pageLabels__label--primary Online
+			span.pageLabels__label 12 Января 2025  
+			span.pageLabels__label 19:00

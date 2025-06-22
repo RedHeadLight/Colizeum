@@ -1,0 +1,16 @@
+mixin feedBlock(modificator, extraClasses, date, count, isOnline)
+	- classList = 'feedBlock'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' feedBlock--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList)
+		include ../feedDate/feedDate.pug
+		+feedDate([], 'feedBlock__date', date)
+
+		include ../feedNews/feedNews.pug
+		+feedNews([], 'feedBlock__news', count, isOnline)

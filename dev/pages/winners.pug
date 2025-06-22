@@ -1,0 +1,22 @@
+extends ../layouts/main.pug
+
+block variables 
+	- var title = 'Наши победители'
+
+block content
+	article.winners
+		.container.winners__container
+			include ../blocks/pageHeading/pageHeading.pug
+			+pageHeading([], 'winners__heading', 'Наши победители')
+
+			include ../blocks/tabsList/tabsList.pug
+			+tabsList([], 'winners__tabs', ['2025', '2024', '2023'])
+
+			.winners__photoes
+				img(src="https://placehold.jp/447x335.png", alt="").winners__photo
+				img(src="https://placehold.jp/447x335.png", alt="").winners__photo
+				img(src="https://placehold.jp/447x335.png", alt="").winners__photo
+				img(src="https://placehold.jp/913x525.png", alt="").winners__photo
+				img(src="https://placehold.jp/447x525.png", alt="").winners__photo
+
+

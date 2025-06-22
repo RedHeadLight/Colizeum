@@ -1,0 +1,30 @@
+mixin latestNews(modificator, extraClasses, count, heading, showBtn)
+	- classList = 'latestNews'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' latestNews--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	
+	div(class=classList) 
+		if heading 
+			.latestNews__heading #{heading}
+
+		.latestNews__list
+			- var i = 0
+			while i < count
+				- i = i + 1
+				.latestNews__item 
+					.latestNews__itemWrapper 
+						.latestNews__itemTexts 
+							span.latestNews__itemHeading NAVI vs Virtus.pro
+							if i == 1
+								span.latestNews__status 16:1
+							p.latestNews__text Что сказал капитан команды после победы. Что сказал капитан команды после...
+						img(src="https://placehold.jp/124x97.png", alt="")
+
+			include ../allNews/allNews.pug
+			+allNews([], 'latestNews__showAll')
