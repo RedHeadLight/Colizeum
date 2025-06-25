@@ -8,4 +8,39 @@ mixin _reglamentsFilter(modificator, extraClasses)
 	if extraClasses
 		- classList = classList + ' ' + extraClasses
 
-	div(class=classList style="border: 1px solid red; padding: 20px 0; text-align: center;") Фильтр регламентов
+	div(class=classList) 
+		.form__part.form__part--flex.form__part--grow
+			include ../filterSelect/filterSelect.pug
+			- 
+				var selects = [
+					{
+						'id': 'select1',
+						'name': 'select1',
+						'defaultOption': 'На русском',
+						'options': ['Опция 1', 'Опция 2', 'Опция 3']
+					},
+					{
+						'id': 'select2',
+						'name': 'select2',
+						'defaultOption': 'Выбрать дату',
+						'options': ['Опция 1', 'Опция 2', 'Опция 3']
+					},
+					{
+						'id': 'select3',
+						'name': 'select3',
+						'defaultOption': 'Все дисциплины',
+						'options': ['Опция 1', 'Опция 2', 'Опция 3']
+					}
+				]
+			for i in selects
+				+filterSelect(['grow'], 'filter__select', i)
+
+
+		.form__part.form__part--flex
+			include ../filterBtn/filterBtn.pug
+			+filterBtn(['wide'], 'filter__filterBtn', 'применить')
+
+			include ../resetBtn/resetBtn.pug
+			+resetBtn([], 'reset__resetBtn', 'сбросить')
+
+		

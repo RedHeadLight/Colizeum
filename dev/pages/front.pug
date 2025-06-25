@@ -11,7 +11,9 @@ block content
 
 			.front__wrapper 
 				.front__innerWrapper 
-					.front__bannerWrapper 
+					.front__bannerWrapper
+						img(src="./images/front-banner.png", alt="").front__bannerImg
+						
 						include ../blocks/pageLabels/pageLabels.pug
 						+pageLabels([], 'front__tabs')
 
@@ -93,8 +95,8 @@ block content
 				+latestNews([], 'front__newsWrapper', 4, 'Последние новости', 'showBtn')
 
 			include ../blocks/_frontFilter/_frontFilter.pug
-			+_frontFilter([], 'front__filter')
-			
+			+_frontFilter(['front'], 'front__filter')
+
 			.front__news
 				include ../blocks/feedBlock/feedBlock.pug
 				+feedBlock([], 'front__newsBlock', '22.01.2025', 3, 'isOnline')

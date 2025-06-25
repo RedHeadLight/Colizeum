@@ -1,0 +1,16 @@
+mixin resetBtn(modificator, extraClasses, resetText)
+	- classList = 'resetBtn'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' resetBtn--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	button(class=classList type="reset") #{resetText}
+		<svg width="12" height="12" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M13.7129 4.71338L5.13922 13.287" stroke="#FFEC69" stroke-width="3"/>
+			<path d="M5.13867 4.71338L13.7123 13.287" stroke="#FFEC69" stroke-width="3"/>
+		</svg>
+

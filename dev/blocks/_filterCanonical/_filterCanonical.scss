@@ -1,0 +1,60 @@
+.filter {
+	background: #1D1D1D;
+	border-bottom: 1px solid #FFFFFF1A;
+	border-radius: 25px;
+	padding: 25px 20px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+
+	&--bigGap {
+		gap: 20px;
+	}
+
+	&--withoutBg {
+		padding: 0;
+		border: none;
+		background: none;
+	}
+}
+
+.form__part {
+	&--flex {
+		display: flex;
+		gap: 10px;
+	}
+
+	&--grow {
+		flex-grow: 1;
+	}
+}
+
+//
+//
+//
+
+.filter--rating {
+	gap: 10px;
+	display: flex;
+	gap: 52px;
+}
+
+.filter--insruction {
+	gap: 60px;
+}
+
+.filter--front {
+	gap: 20px 10px;
+}
+
+.filter__select {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+}
+
+.filter__filterBtn--ml10 {
+	margin-left: 10px;
+}
+

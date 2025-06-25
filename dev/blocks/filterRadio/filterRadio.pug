@@ -1,0 +1,19 @@
+mixin filterRadio(modificator, extraClasses, heading, radios)
+	- classList = 'filterRadio'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' filterRadio--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList)
+		if heading 
+			span.filterRadio__heading #{heading}
+		
+		.filterRadio__list 
+			for i in radios
+				.filterRadio__block 
+					input(type="radio" name=i.name id=i.id).filterRadio__radio.visually-hidden
+					label(for=i.id).filterRadio__label #{i.label}

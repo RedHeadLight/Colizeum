@@ -8,4 +8,33 @@ mixin _partnerFilter(modificator, extraClasses)
 	if extraClasses
 		- classList = classList + ' ' + extraClasses
 
-	div(class=classList style="border: 1px solid red; padding: 20px 0; text-align: center;") Фильтр поиска напарника
+	div(class=classList) 
+		include ../filterSelect/filterSelect.pug
+		- 
+			var selects = [
+				{
+					'id': 'select1',
+					'name': 'select1',
+					'title': '',
+					'defaultOption': 'Выбрать дисциплину',
+					'options': ['Опция 1', 'Опция 2', 'Опция 3']
+				},
+				{
+					'id': 'select3',
+					'name': 'select3',
+					'title': '',
+					'defaultOption': 'LAN или Online',
+					'options': ['Опция 1', 'Опция 2', 'Опция 3']
+				}
+			]
+		for select in selects
+			+filterSelect(['w286'], 'filter__select', select)
+
+		include ../filterBtn/filterBtn.pug
+		+filterBtn(['wide'], 'filter__filterBtn filter__filterBtn--ml10', 'применить')
+
+		include ../resetBtn/resetBtn.pug
+		+resetBtn([], 'reset__resetBtn', 'сбросить')
+
+
+	

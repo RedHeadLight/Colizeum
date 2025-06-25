@@ -1,0 +1,24 @@
+.filterBtn {
+	display: block;
+	font-family: $ttc;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 100%;
+	color: $black;
+	background-color: $yellow;
+	border: none;
+	border-radius: 27px;
+	padding: 19px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+
+	&--wide {
+		min-width: 160px;
+	}
+
+	&--xtra {
+		min-width: 176px;
+	}
+}

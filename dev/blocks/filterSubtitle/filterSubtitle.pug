@@ -1,0 +1,13 @@
+mixin filterSubtitle(modificator, extraClasses)
+	- classList = 'filterSubtitle'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' filterSubtitle--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList) 
+		.filterSubtitle__text Сумма призового фонда турниров за выбранный период: 
+			b 2 500 000₽

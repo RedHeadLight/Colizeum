@@ -1,0 +1,18 @@
+mixin filterSelect(modificator, extraClasses, select)
+	- classList = 'filterSelect'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' filterSelect--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList) 
+		if select.title
+			label.filterSelect__label(for=select.id) !{select.title}
+			
+		select.filterSelect__select(name=select.name id=select.id) 
+			option(value="" selected) #{select.defaultOption} 
+			for i in select.options
+				option(value=i) #{i}

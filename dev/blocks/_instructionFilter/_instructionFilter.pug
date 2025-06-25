@@ -8,4 +8,64 @@ mixin _instructionFilter(modificator, extraClasses)
 	if extraClasses
 		- classList = classList + ' ' + extraClasses
 
-	div(class=classList style="border: 1px solid red; padding: 20px 0; text-align: center;") Фильтр инструкций
+	div(class=classList) 
+		include ../filterSelect/filterSelect.pug
+
+		- 
+			var radios = [
+				{
+					'id': 'radio1',
+					'name': 'radio1',
+					'label': 'Регистрация'
+				},
+				{
+					'id': 'radio2',
+					'name': 'radio2',
+					'label': 'Подтверждение'
+				},
+				{
+					'id': 'radio2',
+					'name': 'radio2',
+					'label': 'Участие'
+				}
+			]
+		include ../filterRadio/filterRadio.pug
+		+filterRadio(['rows', 'smallfont'], 'filter__filterRadio', 'Тип:', radios)
+
+		- 
+			var radios = [
+				{
+					'id': 'radio1',
+					'name': 'radio1',
+					'label': 'PC'
+				},
+				{
+					'id': 'radio2',
+					'name': 'radio2',
+					'label': 'PS'
+				},
+			]
+		include ../filterRadio/filterRadio.pug
+		+filterRadio(['rows', 'smallfont'], 'filter__filterRadio', 'Платформы:', radios)
+
+		- 
+			var selects = [
+				{
+					'id': 'select1',
+					'name': 'select1',
+					'title': '',
+					'defaultOption': 'Выбрать дисциплину',
+					'options': ['Опция 1', 'Опция 2', 'Опция 3']
+				},
+			]
+		for i in selects
+			+filterSelect(['grow'], 'filter__select', i)
+
+
+		.filter__part
+			include ../filterBtn/filterBtn.pug
+			+filterBtn(['wide'], 'filter__filterBtn', 'применить')
+
+			include ../resetBtn/resetBtn.pug
+			+resetBtn([], 'reset__resetBtn', 'сбросить')
+

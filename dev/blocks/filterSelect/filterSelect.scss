@@ -1,0 +1,56 @@
+
+.filter__part {
+	display: flex;
+	gap: 10px;
+
+	&--grow {
+		flex-grow: 1;
+	}
+}
+
+.filterSelect__select {
+	padding: 19px 30px 19px 15px;
+	background-color: $black;
+	border: none;
+	color: #7E7E7E;
+	font-family: $neue;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 150%;
+	border-radius: 12px;
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.56842 1.5L5.06842 4.5L8.56842 1.5' stroke='%237E7E7E' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+	background-repeat: no-repeat;
+	background-position: right 15px center;
+	min-width: 230px;
+	width: 100%;
+}
+
+.filterSelect--w355 {
+	min-width: 355px;
+}
+
+
+.filterSelect--w359 {
+	min-width: 359px;
+}
+
+.filterSelect--w286 {
+	min-width: 286px;
+}
+
+.filterSelect--w378 {
+	min-width: 378px;
+}
+
+.filterSelect__label {
+	font-family: $neue;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 150%;
+	color: $white;
+}
+
+.filterSelect--grow {
+	flex-grow: 1;
+}

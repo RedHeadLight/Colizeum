@@ -1,0 +1,12 @@
+mixin filterBtn(modificator, extraClasses, text)
+	- classList = 'filterBtn'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' filterBtn--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	button(class=classList type="submit") #{text}
+		

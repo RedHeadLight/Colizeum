@@ -8,7 +8,7 @@ block content
 		.container.container--wide.history__container
 			.history__wrapper 
 				include ../blocks/backButton/backButton.pug
-				+backButton([], '', 'Выйти')
+				+backButton([], 'history__back', 'Выйти')
 
 				include ../blocks/profileCard/profileCard.pug
 				+profileCard([], 'history__card')
@@ -17,10 +17,10 @@ block content
 				.history__coverBody
 					.history__coverWrapper
 						include ../blocks/pageHeading/pageHeading.pug
-						+pageHeading(['left', 'small'], 'history__heading', 'История турниров')
+						+pageHeading(['left', 'small', 'ttc'], 'history__heading', 'История турниров')
 
 						include ../blocks/_historyFilter/_historyFilter.pug
-						+_historyFilter([], 'history__filter')
+						+_historyFilter(['withoutBg'], 'history__filter')
 
 					include ../blocks/profileList/profileList.pug
 					+profileList([], 'history__table', 28)

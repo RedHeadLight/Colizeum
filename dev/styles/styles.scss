@@ -7,6 +7,7 @@
 
 @import "../blocks/pageHeading/pageHeading.scss";
 @import "../blocks/videoList/videoList.scss";
+@import "../blocks/videoVideo/videoVideo.scss";
 @import "../blocks/scrollUp/scrollUp.scss";
 @import "../blocks/newsList/newsList.scss";
 @import "../blocks/tabsList/tabsList.scss";
@@ -35,3 +36,11 @@
 @import "../blocks/feedBlock/feedBlock.scss";
 @import "../blocks/feedDate/feedDate.scss";
 @import "../blocks/feedNews/feedNews.scss";
+
+@import "../blocks/_filterCanonical/_filterCanonical.scss";
+@import "../blocks/filterSubtitle/filterSubtitle.scss";
+@import "../blocks/filterBtn/filterBtn.scss";
+@import "../blocks/resetBtn/resetBtn.scss";
+@import "../blocks/filterSelect/filterSelect.scss";
+@import "../blocks/filterRadio/filterRadio.scss";
+

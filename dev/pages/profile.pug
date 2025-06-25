@@ -13,11 +13,12 @@ block content
 			+partnerList([], 'profile__player', 1)
 
 			.profile__wrapper 
-				include ../blocks/pageHeading/pageHeading.pug
-				+pageHeading(['left', 'small'], 'profile__heading', 'Карточка игрока')
+				.profile__historyWrapper
+					include ../blocks/pageHeading/pageHeading.pug
+					+pageHeading(['left', 'small', 'ttc'], 'profile__heading', 'История турниров')
 
-				include ../blocks/_profileFilter/_profileFilter.pug
-				+_profileFilter([], 'profile__filter')
+					include ../blocks/_historyFilter/_historyFilter.pug
+					+_historyFilter(['withoutBg'], 'profile__filter')
 					
 				include ../blocks/profileList/profileList.pug
 				+profileList([], 'profile__table', 28)

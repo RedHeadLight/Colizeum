@@ -1,11 +1,63 @@
 mixin _frontFilter(modificator, extraClasses)
-	- classList = '_frontFilter'
+	- classList = 'filter'
 
 	if modificator
 		each mod in modificator
-			- classList = classList + ' _frontFilter--' + mod
+			- classList = classList + ' filter--' + mod
 
 	if extraClasses
 		- classList = classList + ' ' + extraClasses
 
-	div(class=classList style="border: 1px solid red; padding: 20px 0; text-align: center;") Фильтр рейтинга
+	div(class=classList) 
+		include ../filterSelect/filterSelect.pug
+		- 
+			var selects = [
+				{
+					'id': 'select1',
+					'name': 'select1',
+					'title': '',
+					'defaultOption': 'Выбрать дисциплину',
+					'options': ['Опция 1', 'Опция 2', 'Опция 3']
+				},
+				{
+					'id': 'select1',
+					'name': 'select1',
+					'title': '',
+					'defaultOption': 'Выбрать дату',
+					'options': ['Опция 1', 'Опция 2', 'Опция 3']
+				},
+				{
+					'id': 'select3',
+					'name': 'select3',
+					'title': '',
+					'defaultOption': 'LAN или Online',
+					'options': ['Опция 1', 'Опция 2', 'Опция 3']
+				}
+			]
+		for select in selects
+			+filterSelect(['grow'], 'filter__select', select)
+
+		include ../filterBtn/filterBtn.pug
+		+filterBtn(['xtra'], 'filter__filterBtn', 'применить')
+
+		- 
+			var radios = [
+				{
+					'id': 'radio1',
+					'name': 'radio1',
+					'label': 'Ближайшей дате'
+				},
+				{
+					'id': 'radio2',
+					'name': 'radio1',
+					'label': 'Призовому фонду'
+				}
+			]
+		include ../filterRadio/filterRadio.pug
+		+filterRadio([], 'filter__filterRadio', 'Сортировать по:', radios)
+
+
+
+		include ../filterSubtitle/filterSubtitle.pug
+		+filterSubtitle([], 'filter__filterSubtitle')
+

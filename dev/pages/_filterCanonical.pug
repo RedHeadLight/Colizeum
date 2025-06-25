@@ -1,0 +1,13 @@
+extends ../layouts/main.pug
+
+block variables 
+	- var title = 'Канонический фильтр'
+
+block content
+	article.filterPage
+		.container.container--wide
+			include ../blocks/_filterCanonical/_filterCanonical.pug
+			+_filterCanonical([], 'filterPage__filter')
+			
+
+			

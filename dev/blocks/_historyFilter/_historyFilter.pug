@@ -8,4 +8,27 @@ mixin _historyFilter(modificator, extraClasses)
 	if extraClasses
 		- classList = classList + ' ' + extraClasses
 
-	div(class=classList style="border: 1px solid red; padding: 20px 0; text-align: center;") Фильтр истории
+	div(class=classList) 
+		.form__part.form__part--flex
+			include ../filterSelect/filterSelect.pug
+			- 
+				var selects = [
+					{
+						'id': 'select1',
+						'name': 'select1',
+						'defaultOption': 'За все время',
+						'options': ['Опция 1', 'Опция 2', 'Опция 3']
+					},
+					{
+						'id': 'select2',
+						'name': 'select2',
+						'defaultOption': 'Все дисциплины',
+						'options': ['Опция 1', 'Опция 2', 'Опция 3']
+					}
+				]
+
+			for i in selects
+				+filterSelect(['w355'], 'filter__select', i)
+
+
+		

@@ -8,6 +8,10 @@
 	line-height: 90%;
 	text-transform: uppercase;
 
+	&--ttc {
+		font-family: $ttc;
+	}
+
 	&--left {
 		text-align: left;
 	}

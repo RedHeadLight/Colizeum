@@ -1,0 +1,53 @@
+mixin _filterCanonical(modificator, extraClasses)
+	- classList = 'filter'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' filter--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList) 
+		.filter__part.filter__part--grow
+			include ../filterSelect/filterSelect.pug
+			- 
+				var selects = [
+					{
+						'id': 'select1',
+						'name': 'select1',
+						'title': 'Заголовок',
+						'defaultOption': 'Выбрать дисциплину',
+						'options': ['Опция 1', 'Опция 2', 'Опция 3']
+					}
+				]
+			for i in selects
+				+filterSelect(['grow'], 'filter__select', i)
+
+		.filter__part
+			- 
+				var radios = [
+					{
+						'id': 'radio1',
+						'name': 'radio1',
+						'label': 'Ближайшей дате'
+					},
+					{
+						'id': 'radio2',
+						'name': 'radio1',
+						'label': 'Призовому фонду'
+					}
+				]
+			include ../filterRadio/filterRadio.pug
+			+filterRadio([], 'filter__filterRadio', 'Сортировать по:', radios)
+
+		.filter__part
+			include ../filterBtn/filterBtn.pug
+			+filterBtn([], 'filter__filterBtn', 'применить')
+
+			include ../resetBtn/resetBtn.pug
+			+resetBtn([], 'reset__resetBtn', 'сбросить')
+
+		.filter__part
+			include ../filterSubtitle/filterSubtitle.pug
+			+filterSubtitle([], 'filter__filterSubtitle')

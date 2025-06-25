@@ -8,4 +8,42 @@ mixin _ratingFilter(modificator, extraClasses)
 	if extraClasses
 		- classList = classList + ' ' + extraClasses
 
-	div(class=classList style="border: 1px solid red; padding: 20px 0; text-align: center;") Фильтр рейтинга
+	div(class=classList) 
+		include ../filterSelect/filterSelect.pug
+
+		.filter__part.filter__part--grow
+			- 
+				var selects = [
+					{
+						'id': 'select1',
+						'name': 'select1',
+						'title': '',
+						'defaultOption': 'Выбрать дисциплину',
+						'options': ['Опция 1', 'Опция 2', 'Опция 3']
+					},
+					{
+						'id': 'select2',
+						'name': 'select2',
+						'title': '',
+						'defaultOption': 'Все дисциплины',
+						'options': ['Опция 1', 'Опция 2', 'Опция 3']
+					}
+				]
+			for select in selects
+				+filterSelect(['grow'], 'filter__select', select)
+
+		- 
+			var select = {
+				'id': 'select3',
+				'name': 'select3',
+				'title': 'Сортировать&nbsp;по:',
+				'defaultOption': 'Win Rate по убыванию',
+				'options': ['Опция 1', 'Опция 2', 'Опция 3']
+			}
+		
+		+filterSelect([], 'filter__select', select)
+
+		include ../filterBtn/filterBtn.pug
+		+filterBtn([], 'filter__filterBtn', 'Показать меня')
+
+		
