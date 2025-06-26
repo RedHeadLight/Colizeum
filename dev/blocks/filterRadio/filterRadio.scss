@@ -11,6 +11,13 @@
 .filterRadio__list {
 	display: flex;
 	gap: 21px;
+	flex-wrap: wrap;
+}
+
+.filterRadio--smallGap {
+	.filterRadio__list {
+		gap: 15px 55px;
+	}
 }
 
 .filterRadio__block {
@@ -26,6 +33,7 @@
 	min-height: 24px;
 	padding: 7px 0 7px 31px;
 	color: rgb(255 255 255 / 55%);
+	display: table;
 
 	&::before {
 		content: '';

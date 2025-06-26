@@ -1,0 +1,20 @@
+extends ../layouts/empty.pug
+
+block variables 
+	- var title = 'восстановление пароля'
+
+block content
+	.modalOverlay
+
+	.modal
+		.modal__body.modal__body--withBg
+			.modal__content.thanksModal
+				img(src="./images/thanks__icon.png", alt="").thanksModal__icon
+				.modal__texts
+					.modal__title Спасибо!
+					.modal__desc Ваша заявка на успешно отправлена. Отслеживайте турниры, в которых вы участвуете в своем личном кабинете&nbsp;или на странице расписаний
+				.thanksModal__btns
+					include ../blocks/modalBtn/modalBtn.pug
+					+modalBtn([], 'thanksModal__btn', 'Личный кабинет', 'link')
+					+modalBtn(['white'], 'thanksModal__btn', 'Расписание', 'link')
+

@@ -1,0 +1,44 @@
+extends ../layouts/empty.pug
+
+block variables 
+	- var title = 'восстановление пароля'
+
+block content
+	.modalOverlay
+
+	.modal
+		.modal__body.modal__body--withBg
+			.modal__texts 
+				span.modal__title Восстановление пароля
+				span.modal__desc Мы отправили вам код на почту 
+			
+			form(action="#").modal__content.enterCodeModal
+				.enterCodeModal__codeWrapper
+					include ../blocks/modalCodeField/modalCodeField.pug
+					+modalCodeField([], 'enterCodeModal__field', 'codeNumber1')
+					+modalCodeField([], 'enterCodeModal__field', 'codeNumber2')
+					+modalCodeField([], 'enterCodeModal__field', 'codeNumber3')
+					+modalCodeField([], 'enterCodeModal__field', 'codeNumber4')
+					+modalCodeField([], 'enterCodeModal__field', 'codeNumber5')
+					+modalCodeField([], 'enterCodeModal__field', 'codeNumber6')
+
+				include ../blocks/modalCheckbox/modalCheckbox.pug
+				+modalCheckbox([], 'enterCodeModal__checkbox', 'Я не робот', 'notRobot')
+
+				include ../blocks/modalBtn/modalBtn.pug
+				+modalBtn([], 'enterCodeModal__btn', 'Отправить код', 'submit', 'showIcon')
+
+		.modal__footer
+			p Не приходит код? Мы отправим его еще раз через 
+				b 29&nbsp;сек...
+			button(type="button") Отправить заново
+				<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_1_12286)">
+					<path d="M0 0.916667V4.125C0 4.24913 0.0453558 4.35655 0.136067 4.44727C0.226779 4.53798 0.334201 4.58333 0.458333 4.58333H3.66667C3.86719 4.58333 4.00803 4.48785 4.08919 4.29688C4.17036 4.11068 4.13694 3.94596 3.98893 3.80273L3.00065 2.81445C3.70725 2.16037 4.54036 1.83333 5.5 1.83333C5.99653 1.83333 6.47038 1.93001 6.92155 2.12337C7.37272 2.31673 7.76302 2.57812 8.09245 2.90755C8.42188 3.23698 8.68327 3.62728 8.87663 4.07845C9.06999 4.52962 9.16667 5.00347 9.16667 5.5C9.16667 5.99653 9.06999 6.47038 8.87663 6.92155C8.68327 7.37272 8.42188 7.76302 8.09245 8.09245C7.76302 8.42188 7.37272 8.68327 6.92155 8.87663C6.47038 9.06999 5.99653 9.16667 5.5 9.16667C4.93186 9.16667 4.39475 9.04253 3.88867 8.79427C3.3826 8.54601 2.95529 8.1951 2.60677 7.74154C2.57335 7.69379 2.51845 7.66515 2.44206 7.6556C2.37044 7.6556 2.31076 7.67708 2.26302 7.72005L1.2819 8.70833C1.23893 8.74653 1.21625 8.79546 1.21387 8.85514C1.21148 8.91482 1.22938 8.96853 1.26758 9.01628C1.78798 9.64648 2.41819 10.1347 3.1582 10.4808C3.89822 10.8269 4.67882 11 5.5 11C6.24479 11 6.95616 10.8544 7.63411 10.5632C8.31207 10.2719 8.89692 9.88043 9.38867 9.38867C9.88043 8.89692 10.2719 8.31207 10.5632 7.63411C10.8544 6.95616 11 6.24479 11 5.5C11 4.75521 10.8544 4.04384 10.5632 3.36589C10.2719 2.68793 9.88043 2.10308 9.38867 1.61133C8.89692 1.11957 8.31207 0.728082 7.63411 0.436849C6.95616 0.145616 6.24479 0 5.5 0C4.79818 0 4.11903 0.132487 3.46256 0.397461C2.8061 0.662435 2.22244 1.03602 1.71159 1.51823L0.780599 0.594401C0.642144 0.446398 0.475043 0.412977 0.279297 0.494141C0.0930986 0.575304 0 0.716146 0 0.916667Z" fill="#FFF566"/>
+					</g>
+					<defs>
+					<clipPath id="clip0_1_12286">
+					<rect width="11" height="11" fill="white" transform="matrix(-1 0 0 1 11 0)"/>
+					</clipPath>
+					</defs>
+				</svg>

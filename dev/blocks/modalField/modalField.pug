@@ -1,0 +1,18 @@
+mixin modalField(modificator, extraClasses, placeholder, type, id, name, label, note)
+	- classList = 'modalField'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' modalField--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList) 
+		.modalField__wrapper 
+			if label
+				label.modalField__label(for=id) #{label}
+					if note
+						span #{note}
+			input(type=type id=id name=name placeholder=placeholder).modalField__input
+				

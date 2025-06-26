@@ -1,0 +1,32 @@
+extends ../layouts/empty.pug
+
+block variables 
+	- var title = 'Регистрация в ЛК'
+
+block content
+	.modalOverlay
+
+	.modal.modal--wide
+		.modal__body 
+			.modal__texts 
+				span.modal__title Регистрация в ЛК
+				span.modal__desc.modal__desc--error Пожалуйста заполните все необходимые поля
+
+			form(action="#").modal__content.regModal
+				.regModal__grid
+					include ../blocks/modalField/modalField.pug
+					+modalField(['error'], 'regModal__field', 'Введите почту', 'email', 'regEmail', 'regEmail', 'Email', '*')
+					+modalField([], 'regModal__field', 'Введите пароль', 'password', 'regPassword', 'regPassword', 'Пароль', '*')
+					+modalField([], 'regModal__field', 'Введите никнейм', 'password', 'regUsername', 'regUsername', 'Никнейм', '*')
+					+modalField([], 'regModal__field', 'Полное имя', 'password', 'regName', 'regName', 'ФИО', '*')
+					+modalField([], 'regModal__field', '+7 (999) 999-99-99', 'password', 'regPhone', 'regPhone', 'Телефон', '*')
+					+modalField([], 'regModal__field', 'Введите название', 'password', 'regTeam', 'regTeam', 'Название команды' ,' (необязательно)')
+					+modalField([], 'regModal__field', 'Ссылка на телеграм', 'password', 'regTG', 'regTG', 'Telegram аккаунт', '*')
+
+					include ../blocks/modalCheckbox/modalCheckbox.pug
+					+modalCheckbox([], 'regModal__checkbox', 'Я не робот', 'notRobot')
+
+				.regModal__wrapper
+					include ../blocks/modalBtn/modalBtn.pug
+					+modalBtn([], 'regModal__btn', 'Зарегистрироваться', 'submit', 'showIcon')
+

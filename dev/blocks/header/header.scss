@@ -1,3 +1,76 @@
 .header {
 	display: block;
 }
+
+.header__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 14px 30px;
+}
+
+.header__list {
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	gap: 40px;
+}
+
+.header__link, .header__sublink {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+	font-family: $neue;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 150%;
+	color: $white;
+	text-decoration: none;
+}
+
+
+.header__item--hasSubmenu{
+	position: relative;
+}
+
+.header__item {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+}
+.header__submenu {
+	list-style-type: none;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	top: calc(100% + 20px);
+	background-color: $black;
+	padding: 10px;
+	display: grid;
+	gap: 8px;
+	border-radius: 10px;
+	width: max-content;
+	border: 1px solid $grey;
+	display: none;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 100%;
+		width: 100%;
+		height: 20px;
+	}
+}
+
+.header__item:hover, .header__item:focus-within {
+	.header__submenu {
+		display: grid;
+	}
+}
+
+.header__subitem {
+	display: grid;
+	gap: 5px;
+}

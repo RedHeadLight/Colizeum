@@ -1,0 +1,112 @@
+extends ../layouts/empty.pug
+
+block variables 
+	- var title = 'Регистрация'
+
+block content
+	.modalOverlay
+
+	.modal.modal--wide
+		.modal__header
+			.modal__headerTitle Регистрация
+
+		.modal__body.modal__body--withBorder
+			form(action="#").modal__content.registrationModal
+				.registrationModal__grid.registrationModal__grid--3
+					include ../blocks/modalField/modalField.pug
+					+modalField([], 'registrationModal__field', 'Полное имя', 'password', 'registrationName', 'registrationName', 'ФИО', '*')
+					+modalField([], 'registrationModal__field', '+7 (999) 999-99-99', 'tel', 'registrationPhone', 'registrationPhone', 'Телефон', '*')
+					+modalField(['error'], 'registrationModal__field', 'Введите почту', 'email', 'registrationEmail', 'registrationEmail', 'Email', '*')
+					
+				.registrationModal__grid.registrationModal__grid--2
+					include ../blocks/filterSelect/filterSelect.pug
+					- 
+						var selects = [
+							{
+								'id': 'select1',
+								'name': 'select1',
+								'title': '',
+								'defaultOption': 'Страна',
+								'options': ['Опция 1', 'Опция 2', 'Опция 3']
+							},
+							{
+								'id': 'select2',
+								'name': 'select2',
+								'title': '',
+								'defaultOption': 'Регион / Область',
+								'options': ['Опция 1', 'Опция 2', 'Опция 3']
+							},
+							{
+								'id': 'select3',
+								'name': 'select3',
+								'title': '',
+								'defaultOption': 'Город',
+								'options': ['Опция 1', 'Опция 2', 'Опция 3']
+							},
+							{
+								'id': 'select4',
+								'name': 'select4',
+								'title': '',
+								'defaultOption': 'Клуб',
+								'options': ['Опция 1', 'Опция 2', 'Опция 3']
+							},
+							{
+								'id': 'select5',
+								'name': 'select5',
+								'title': '',
+								'defaultOption': 'Выберите дисциплину',
+								'options': ['Опция 1', 'Опция 2', 'Опция 3']
+							},
+							{
+								'id': 'select6',
+								'name': 'select6',
+								'title': '',
+								'defaultOption': 'Выбрать турнир',
+								'options': ['Опция 1', 'Опция 2', 'Опция 3']
+							}
+						]
+					for select in selects
+						+filterSelect([], 'registrationModal__select', select)
+
+				.registrationModal__block
+					.registrationModal__blockHeading Знаете ли вы о том, как поучаствовать в турнире?
+					.registrationModal__radios
+						- 
+							var radios = [
+								{
+									'id': 'radio1',
+									'name': 'radio1',
+									'label': 'Все знаю, помощь не нужна'
+								},
+								{
+									'id': 'radio2',
+									'name': 'radio1',
+									'label': 'Нет аккаунта на Faceit, Battlefy, и др.'
+								},
+								{
+									'id': 'radio3',
+									'name': 'radio1',
+									'label': 'Есть аккаунт Faceit, не знаю как создать команду /вступить в турнир'
+								}
+							]
+						include ../blocks/filterRadio/filterRadio.pug
+						+filterRadio(['smallGap'], 'registrationModal__radio', '', radios)
+
+				.registrationModal__grid.registrationModal__grid--2
+					+modalField([], 'registrationModal__field', 'Введите  никнейм', 'text', 'registrationNickname', 'registrationNickname', 'Никнейм Battlefye')
+					+modalField([], 'registrationModal__field', 'Название название команды', 'text', 'registrationTeam', 'registrationTeam', 'Название название команды')
+
+				.registrationModal__checkboxes
+					include ../blocks/modalCheckbox/modalCheckbox.pug
+					+modalCheckbox(['alignLeft'], 'registrationModal__checkbox', 'Я согласен (-а) с политикой конфиденциальности в отношении обработки пользовательских данных', 'agreement')
+					+modalCheckbox(['alignLeft'], 'registrationModal__checkbox', 'Я даю согласие на обработку персональных данных', 'privacy')
+
+				.registrationModal__wrapper
+					include ../blocks/modalBtn/modalBtn.pug
+					+modalBtn(['white'], 'registrationModal__btn', 'Отправить', 'submit', 'showIcon')
+
+		.modal__footer.modal__footer--mediumText
+			p Для отслеживания текущих турниров и автозаполнения полей при регистрации на турнире  
+				a(href="#") войдите 
+				| в личный кабинет или  
+				a(href="#") создайте профиль

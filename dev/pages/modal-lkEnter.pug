@@ -1,0 +1,33 @@
+extends ../layouts/empty.pug
+
+block variables 
+	- var title = 'Вход в личный кабинет'
+
+block content
+	.modalOverlay
+
+	.modal
+		.modal__body.modal__body--withBg
+			.modal__texts 
+				span.modal__title Вход в личный кабинет
+				span.modal__desc.modal__desc--error Неверная почта или пароль
+
+			form(action="#").modal__content.authModal
+				include ../blocks/modalField/modalField.pug
+				+modalField([], 'authModal__field', 'Введите почту', 'email', 'enterEmail', 'enterEmail', 'Email')
+				+modalField([], 'authModal__field', '• • • • • •', 'password', 'enterPassword', 'enterPassword', 'Пароль')
+
+				include ../blocks/modalCheckbox/modalCheckbox.pug
+				+modalCheckbox([], 'authModal__checkbox', 'Я не робот', 'notRobot')
+
+				.authModal__wrapper
+					include ../blocks/modalBtn/modalBtn.pug
+					+modalBtn([], 'authModal__btn', 'Отправить', 'submit', 'showIcon')
+					+modalCheckbox([], 'authModal__remember', 'Запомнить меня', 'rememberMe')
+
+		.modal__footer
+			p Не удаётся войти? 
+			p 
+				a(href="#") Восстановить аккаунт 
+				| или 
+				a(href="#") Зарегистрироваться 

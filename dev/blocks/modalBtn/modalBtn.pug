@@ -1,0 +1,19 @@
+mixin modalBtn(modificator, extraClasses, text, btnType, showIcon)
+	- classList = 'modalBtn'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' modalBtn--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	if btnType == 'link'
+		a(href="#" class=classList) #{text}
+	else
+		button(type=btnType class=classList) #{text} 
+			if showIcon
+				<svg class="modalBtn__icon" width="29" height="29" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect width="29" height="29" rx="18.5" fill="white"/>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7259 22.524L19.1737 16.0761L13.5369 16.0761L16.012 13.601L22.1614 13.601L23.399 13.601L23.399 14.8385L23.399 20.9879L20.9239 23.463V17.8262L14.476 24.2741L12.7259 22.524Z" fill="black"/>
+				</svg>		

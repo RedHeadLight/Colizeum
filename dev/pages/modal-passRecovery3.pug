@@ -1,0 +1,20 @@
+extends ../layouts/empty.pug
+
+block variables 
+	- var title = 'восстановление пароля 3'
+
+block content
+	.modalOverlay
+
+	.modal
+		.modal__body.modal__body--withBg
+			.modal__texts 
+				span.modal__title Введите новый пароль
+			
+			form(action="#").modal__content.newPasswordModal
+				include ../blocks/modalField/modalField.pug
+				+modalField([], 'newPasswordModal__field', '• • • • • •', 'password', 'password1', 'password1', 'Новый пароль')
+				+modalField([], 'newPasswordModal__field', '• • • • • •', 'password2', 'password2', 'passRecovery', 'Повторите еще раз')
+
+				include ../blocks/modalBtn/modalBtn.pug
+				+modalBtn([], 'newPasswordModal__btn', 'Войти', 'submit', 'showIcon')

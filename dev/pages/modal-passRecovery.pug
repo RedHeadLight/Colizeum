@@ -1,0 +1,19 @@
+extends ../layouts/empty.pug
+
+block variables 
+	- var title = 'восстановление пароля'
+
+block content
+	.modalOverlay
+
+	.modal
+		.modal__body.modal__body--withBg
+			.modal__texts 
+				span.modal__title Восстановление пароля
+
+			form(action="#").modal__content.passRecoveryModal
+				include ../blocks/modalField/modalField.pug
+				+modalField([], 'passRecoveryModal__field', 'Введите почту', 'email', 'passRecovery', 'passRecovery', 'Email')
+
+				include ../blocks/modalBtn/modalBtn.pug
+				+modalBtn([], 'passRecoveryModal__btn', 'Отправить', 'submit', 'showIcon')

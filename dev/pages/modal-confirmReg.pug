@@ -1,0 +1,33 @@
+extends ../layouts/empty.pug
+
+block variables 
+	- var title = 'Подтверждение регистрации'
+
+block content
+	.modalOverlay
+
+	.modal
+		.modal__body.modal__body--withBg
+			.modal__texts
+				span.modal__title Подтверждение регистрации
+				span.modal__desc Мы отправили вам код на почту 
+			
+			form(action="#").modal__content.enterCodeModal
+				.enterCodeModal__codeWrapper
+					include ../blocks/modalCodeField/modalCodeField.pug
+					+modalCodeField([], 'enterCodeModal__field', 'codeNumber1')
+					+modalCodeField([], 'enterCodeModal__field', 'codeNumber2')
+					+modalCodeField([], 'enterCodeModal__field', 'codeNumber3')
+					+modalCodeField([], 'enterCodeModal__field', 'codeNumber4')
+					+modalCodeField([], 'enterCodeModal__field', 'codeNumber5')
+					+modalCodeField([], 'enterCodeModal__field', 'codeNumber6')
+
+				include ../blocks/modalCheckbox/modalCheckbox.pug
+				+modalCheckbox([], 'enterCodeModal__checkbox', 'Я не робот', 'notRobot')
+
+				include ../blocks/modalBtn/modalBtn.pug
+				+modalBtn([], 'enterCodeModal__btn', 'Войти', 'submit', 'showIcon')
+
+		.modal__footer.modal__footer--shortText
+			p Не приходит код? Мы отправим его еще раз через 
+				b 29&nbsp;сек...

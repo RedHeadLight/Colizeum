@@ -1,0 +1,13 @@
+mixin modalCodeField(modificator, extraClasses, id)
+	- classList = 'modalCodeField'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' modalCodeField--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList) 
+		label.modalCode__label(for=id) 
+		input(id=id).modalCode__input

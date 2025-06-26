@@ -1,0 +1,13 @@
+mixin modalCheckbox(modificator, extraClasses, label, key)
+	- classList = 'modalCheckbox'
+
+	if modificator
+		each mod in modificator
+			- classList = classList + ' modalCheckbox--' + mod
+
+	if extraClasses
+		- classList = classList + ' ' + extraClasses
+
+	div(class=classList) 
+		input(type="checkbox" name=key id=key).visually-hidden.modalCheckbox__input
+		label(for=key).modalCheckbox__label #{label} 
