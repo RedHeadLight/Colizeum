@@ -9,8 +9,13 @@ mixin header(modificator, extraClasses)
 		- classList = classList + ' ' + extraClasses
 
 	header(class=classList) 
-		.header__container 
-			nav.header__menu 
+		.container.container--wide.header__container 
+			nav.header__menu
+				button(type='button').header__mobileCloseBtn.upToDesktopMedium
+					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+						<g fill="#ffec69" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(9.84615,9.84615)"><path d="M21.73438,19.64063l-2.09766,2.09375c-0.38281,0.38672 -1.00781,0.38672 -1.39453,0l-5.24219,-5.23828l-5.23828,5.23828c-0.38672,0.38672 -1.01562,0.38672 -1.39844,0l-2.09766,-2.09375c-0.38672,-0.38672 -0.38672,-1.01172 0,-1.39844l5.23828,-5.24219l-5.23828,-5.23828c-0.38281,-0.39062 -0.38281,-1.01953 0,-1.39844l2.09766,-2.09766c0.38281,-0.38672 1.01172,-0.38672 1.39844,0l5.23828,5.24219l5.24219,-5.24219c0.38672,-0.38672 1.01563,-0.38672 1.39453,0l2.09766,2.09375c0.38672,0.38672 0.38672,1.01563 0.00391,1.40234l-5.24219,5.23828l5.23828,5.24219c0.38672,0.38672 0.38672,1.01172 0,1.39844z"></path></g></g>
+					</svg>
+
 				ul.header__list 
 					li.header__item 
 						a(href="#").header__link Расписание
@@ -30,8 +35,6 @@ mixin header(modificator, extraClasses)
 								a(href="#").header__sublink какая-то ссылка
 							li.header__subitem
 								a(href="#").header__sublink какая-то ссылка
-			img(src="./images/logo.svg", alt="").headrr__logo
-			nav.header__menu 
 				ul.header__list
 					li.header__item.header__item--hasSubmenu
 						a(href="#").header__link.header__link--hasSubmenu Новости
@@ -68,4 +71,9 @@ mixin header(modificator, extraClasses)
 								<clipPath id="bgblur_0_1_21752_clip_path" transform="translate(10 9.9375)"><path d="M13.4375 0.0625C20.8588 0.0625 26.875 6.07867 26.875 13.5C26.875 20.9213 20.8588 26.9375 13.4375 26.9375C6.01617 26.9375 0 20.9213 0 13.5C0 6.07867 6.01617 0.0625 13.4375 0.0625Z"/>
 								</clipPath></defs>
 							</svg>
-
+			
+			a(href="/").header__logo 
+				img(src="./images/logo.svg", alt="")
+			
+			button(type='button').header__mobileOpenBtn.upToDesktopMedium
+				<svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g clip-path="url(#clip0_429_11066)"> <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke="#fff566" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> </g> <defs> <clipPath id="clip0_429_11066"> <rect width="24" height="24" fill="white" transform="translate(0 0.000915527)"></rect> </clipPath> </defs> </g></svg>

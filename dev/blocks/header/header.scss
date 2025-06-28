@@ -1,13 +1,37 @@
 .header {
-	display: block;
+	margin-bottom: 18px;
+	@media(min-width: $desktopMedium) {
+		margin-bottom: 36px;
+	}
 }
 
 .header__container {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 20px;
-	padding: 14px 30px;
+	position: relative;
+	padding-top: 14px;
+	padding-bottom: 14px;
+}
+
+.header__logo {
+	@media(min-width: $desktopMedium) {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	img {
+		display: block;
+	}
+}
+
+.header__menu {
+	@media(min-width: $desktopMedium) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		justify-content: space-between;
+		gap: 250px;
+	}
 }
 
 .header__list {
@@ -15,6 +39,12 @@
 	list-style-type: none;
 	display: flex;
 	gap: 40px;
+
+	@media(min-width: $desktop) {
+		& + & {
+			justify-content: end;
+		}
+	}
 }
 
 .header__link, .header__sublink {
@@ -43,8 +73,9 @@
 	list-style-type: none;
 	padding: 0;
 	position: absolute;
-	left: 0;
-	top: calc(100% + 20px);
+	left: 50%;
+	transform: translateX(-50%);
+	top: calc(100% + 10px);
 	background-color: $black;
 	padding: 10px;
 	display: grid;
@@ -60,7 +91,7 @@
 		left: 0;
 		bottom: 100%;
 		width: 100%;
-		height: 20px;
+		height: 10px;
 	}
 }
 
@@ -73,4 +104,81 @@
 .header__subitem {
 	display: grid;
 	gap: 5px;
+}
+
+.header__mobileCloseBTn {
+	background: none;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	svg {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+// Мобильное меню.
+@media(max-width: ($desktopMedium - 1px)) {
+	.header__menu {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100vh;
+		height: 100dvh;
+		padding: 20px;
+		z-index: 10;
+		background-color: $grey;
+		overflow-y: auto;
+		display: none;
+
+		&--active {
+			display: block;
+		}
+	}
+
+	.header__list {
+		display: grid;
+		gap: 20px;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.header__item {
+		justify-content: center;
+	}
+
+	.header__submenu {
+		position: static;
+		transform: none;
+	}
+
+	.header__item--hasSubmenu {
+		flex-direction: column;
+	}
+
+	.header__link--hasSubmenu svg {
+		display: none;
+	}
+
+	.header__submenu {
+		display: grid;
+		background: transparent;
+	}
+
+	.header__mobileCloseBtn, .header__mobileOpenBtn   {
+		border: none;
+		background: transparent;
+		padding: 5px;
+		margin-left: auto;
+		display: table;
+	}
+
+	.header__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 }

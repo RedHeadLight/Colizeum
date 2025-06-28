@@ -25,9 +25,15 @@
 }
 
 .rating__wrapper {
-	display: flex;
-	justify-content: space-between;
-	gap: 50px;
+
+	display: grid;
+	gap: 20px;
+
+	@media (min-width: $mobileMedium) {
+		display: flex;
+		justify-content: space-between;
+		gap: 50px;
+	}
 }
 
 .reviews__loadMore {
@@ -44,6 +50,13 @@
 
 .partner__filter {
 	margin-bottom: 18px;
+}
+
+.partner__btnsWrapper {
+	@media (min-width: $mobileMedium) {
+		display: flex;
+		gap: 17px;
+	}
 }
 
 .profile__wrapper {
@@ -64,9 +77,13 @@
 
 .lk__container {
 	display: grid;
-	grid-template-columns: 423px 1fr;
-	gap: 32px;
+	gap: 20px;
 	padding-bottom: 52px;
+
+	@media (min-width: $desktopMedium) {
+		grid-template-columns: 423px 1fr;
+		gap: 32px;
+	}
 }
 
 .lk__wrapper {
@@ -99,8 +116,11 @@
 
 .lk__formWrapper {
 	display: grid;
-    grid-template-columns: 1fr 1fr;
 	gap: 19px;
+
+	@media (min-width: $desktop) {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 .lk__formBlock {
@@ -109,10 +129,12 @@
 }
 
 .history__container {
-	display: flex;
-	gap: 20px;
+	@media(min-width: $desktopMedium) {
+		display: grid;
+		grid-template-columns: 447px 1fr;
+		gap: 20px;
+	}
 }
-
 .history__coverWrapper {
 	padding-left: 17px;
 	padding-right: 17px;
@@ -126,6 +148,10 @@
 	padding: 30px 11px 14px;
 	border-radius: 35px;
 	background: #101010;
+}
+
+.video__back, .profile__back {
+	margin-bottom: 20px;
 }
 
 .tournament__link {
@@ -156,8 +182,16 @@
 	margin-bottom: 97px;
 }
 
-.tournament__btns {
+.tournament__btns .pairBtns__btns {
 	margin-bottom: 15px;
+	display: grid;
+	gap: 20px;
+
+	@media(min-width: $mobileMedium) {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
 }
 
 .tournamen__innerWrapper {
@@ -165,10 +199,14 @@
 	border-radius: 30px;
 	padding: 15px 20px 37px;
 	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
 	gap: 56px;
-    grid-template-columns: 510px 1fr;
 	position: relative;
 	overflow: hidden;
+
+	@media (min-width: $desktop) {
+		grid-template-columns: 510px 1fr;
+	}
 }
 
 .tournamen__innerWrapper img {
@@ -222,6 +260,12 @@
 	line-height: 90%;
 	color: $yellow;
 	grid-column: 1/2;
+	z-index: 2;
+}
+
+.tournament__tabs {
+	z-index: 2;
+	max-width: calc(100% - $containerPadding);
 }
 
 .tournament__info {
@@ -274,41 +318,57 @@
 
 .winners__photoes {
 	display: grid;
-	gap: 20px;
-	grid-template-columns: 1fr 1fr 1fr;
+	gap: 10px;
 	margin-bottom: 96px;
+
+	@media(min-width: $tablet) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media(min-width: $desktop) {
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 20px;
+	}
 }
 
 .winners__photo {
+	display: block;
+	width: 100%;
 	border-radius: 25px;
 	aspect-ratio: 447/335;
 	object-fit: cover;
 	border: 5px solid #101010;
 
-	&:nth-child(5n+4) {
-		aspect-ratio: 913/525;
-		grid-column: span 2;
-	}
+	@media(min-width: $desktop) {
+		&:nth-child(5n+4) {
+			aspect-ratio: 913/525;
+			grid-column: span 2;
+		}
 
-	&:nth-child(5n) {
-		aspect-ratio: 447/525;
+		&:nth-child(5n) {
+			aspect-ratio: 447/525;
+		}
 	}
 }
 .front__wrapper {
 	display: grid;
 	align-items: start;
-	grid-template-columns: 1fr 447px;
 	gap: 20px;
 	border-radius: 35px;
 	padding: 10px;
 	margin-bottom: 105px;
+
+	@media (min-width: $desktopMedium) {
+		grid-template-columns: 1fr 447px;
+		grid-template-rows: 500px;
+	}
 }
 
 .front__innerWrapper, .front__newsWrapper {
 	border-radius: 30px;
 	background-color: #090909;
 	padding: 10px;
-	height: 489px;
+	min-height: 489px;
 }
 
 .front__innerWrapper {
@@ -347,7 +407,6 @@
 	padding: 26px 14px 0 10px;
 	overflow-y: auto;
 	position: relative;
-
 	mask: linear-gradient(to bottom,
 		#090909,
 		#090909 calc(100% - var(--right-fade)),
@@ -358,6 +417,10 @@
 	animation: scrollfade;
 	animation-timeline: --scrollfade;
 	scroll-timeline: --scrollfade y;
+
+	@media(min-width: $desktopMedium) {
+		max-height: 100%;
+	}
 
 	&::-webkit-scrollbar{
 		width: 13px;
@@ -400,20 +463,29 @@
 .front__title {
 	font-family: $neue;
 	font-weight: 700;
-	font-size: 62px;
 	line-height: 90%;
 	color: $yellow;
+	font-size: 40px;
 	margin-bottom: 43px;
 	margin-top: 43px;
 	max-width: 460px;
+
+	@media (min-width: $desktopMedium) {
+		font-size: 62px;
+	}
 }
 
 .front__bannerText {
 	background-image: url("../images/front-text-bg.png");
 	background-repeat: no-repeat;
+	background-size: cover;
 	border-radius: 25px;
 	padding: 15px;
-	width: 379px;
+	overflow: hidden;
+
+	@media(min-width: $desktopMedium) {
+		width: 379px;
+	}
 }
 
 .front__timer {
@@ -447,13 +519,35 @@
 	gap: 7px;
 	font-weight: 700;
 	font-family: $ttc;
-	font-size: 45px;
+	font-size: 25px;
 	line-height: 150%;
 	text-transform: uppercase;
 	color: $white;
+	margin-top: 18px;
 	margin-bottom: 36px;
+
+	@media (min-width: $desktop) {
+		font-size: 45px;
+		margin-top: 38px;
+	}
+}
+
+.front__btns {
+	margin-top: 20px;
+
+	@media (min-width: $desktop) {
+		margin-top: 0;
+	}
+
+	.pairBtns__btns {
+		justify-content: start;
+	}
 }
 
 .front__btns .pairBtns__btn {
 	min-width: 159px;
+
+	@media (max-width: $desktopMedium) {
+		width: 100%;
+	}
 }

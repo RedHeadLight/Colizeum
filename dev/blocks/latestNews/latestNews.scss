@@ -2,6 +2,10 @@
 	display: grid;
 	gap: 15px;
 	padding-bottom: 45px;
+
+	@media(max-width: $desktopMedium) {
+		padding-bottom: 20px;
+	}
 }
 
 .latestNews__item {
@@ -49,6 +53,17 @@
 		width: 124px;
 		height: 97px;
 		border-radius: 15px;
+		object-fit: cover;
+	}
+
+	@media(max-width: ($desktopMedium - 1px)) {
+		display: flex;
+		flex-direction: column-reverse;
+
+		img {
+			width: 100%;
+			height: 200px;
+		}
 	}
 }
 

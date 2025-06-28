@@ -1,1 +1,0 @@
-//.pageTabs scripts goes here

@@ -8,41 +8,42 @@ mixin profileList(modificator, extraClasses, count)
 	if extraClasses
 		- classList = classList + ' ' + extraClasses
 
-	table(class=classList) 
-		thead.profileList__heading 
-			tr
-				th.profileList__headCell.profileList__headCell--date Дата
-				th.profileList__headCell.profileList__headCell--discipline Дисциплина
-				th.profileList__headCell.profileList__headCell--place Место
-				th.profileList__headCell.profileList__headCell--sum Сумма выигранных призовых
-		tbody.profileList__list
-			- var i = 0
-			while i < 3
-				- i = i + 1
-				tr.profileList__item
-					td.profileList__cell.profileList__cell--date 22.03.2019
-					td.profileList__cell.profileList__cell--discipline
-						img(src="https://placehold.jp/33x33.png", alt="").profileList__icon
-						| Dota 2
-					td.profileList__cell.profileList__cell--place 
-						img(src="https://placehold.jp/37x37.png", alt="").profileList__icon
-					td.profileList__cell.profileList__cell--sum 
-						b 168 980₽ 
-						| и 
-						b 120 000₽ 
-						| на игровой баланс
+	div(class=classList)
+		table.profileList__table
+			thead.profileList__head
+				tr
+					th.profileList__headCell.profileList__headCell--date Дата
+					th.profileList__headCell.profileList__headCell--discipline Дисциплина
+					th.profileList__headCell.profileList__headCell--place Место
+					th.profileList__headCell.profileList__headCell--sum Сумма выигранных призовых
+			tbody.profileList__list
+				- var i = 0
+				while i < 3
+					- i = i + 1
+					tr.profileList__item
+						td.profileList__cell.profileList__cell--date 22.03.2019
+						td.profileList__cell.profileList__cell--discipline
+							img(src="https://placehold.jp/33x33.png", alt="").profileList__icon
+							| Dota 2
+						td.profileList__cell.profileList__cell--place 
+							img(src="./images/" + i + "place-icon.png", alt="").profileList__icon
+						td.profileList__cell.profileList__cell--sum 
+							b 168 980₽ 
+							| и 
+							b 120 000₽ 
+							| на игровой баланс
 
-			- var i = 0
-			while i < count
-				- i = i + 1
-				tr.profileList__item
-					td.profileList__cell.profileList__cell--date 22.03.2019
-					td.profileList__cell.profileList__cell--discipline
-						img(src="https://placehold.jp/33x33.png", alt="").profileList__icon
-						| Dota 2
-					td.profileList__cell.profileList__cell--place 44
-					td.profileList__cell.profileList__cell--sum 
-						b 168 980₽ 
-						| и 
-						b 120 000₽ 
-						| на игровой баланс
+				- var i = 0
+				while i < count
+					- i = i + 1
+					tr.profileList__item
+						td.profileList__cell.profileList__cell--date 22.03.2019
+						td.profileList__cell.profileList__cell--discipline
+							img(src="https://placehold.jp/33x33.png", alt="").profileList__icon
+							| Dota 2
+						td.profileList__cell.profileList__cell--place 44
+						td.profileList__cell.profileList__cell--sum 
+							b 168 980₽ 
+							| и 
+							b 120 000₽ 
+							| на игровой баланс

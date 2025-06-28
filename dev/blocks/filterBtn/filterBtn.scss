@@ -1,5 +1,4 @@
 .filterBtn {
-	display: block;
 	font-family: $ttc;
 	font-weight: 700;
 	font-size: 13px;
@@ -10,15 +9,18 @@
 	border-radius: 27px;
 	padding: 19px 20px;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 	text-transform: uppercase;
 
 	&--wide {
-		min-width: 160px;
+		@media(min-width: $mobileMedium) {
+			min-width: 160px;
+		}
 	}
 
-	&--xtra {
+	&--extra {
 		min-width: 176px;
 	}
 }

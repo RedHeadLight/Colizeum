@@ -1,14 +1,19 @@
 .feedBlock {
-	display: grid;
-	padding: 20px 20px 30px;
-	grid-template-columns: 294px 1fr;
-	gap: 142px;
+	padding: 20px;
 	justify-content: space-between;
 	border-radius: 35px;
 	background-color: #101010;
+
+	@media(min-width: $desktopMedium) {
+		display: grid;
+		grid-template-columns: 294px 1fr;
+		gap: 142px;
+	}
 }
 
 .feedBlock__date {
-	position: sticky;
-	top: 0;
+	@media(min-width: $desktopMedium) {
+		position: sticky;
+		top: 0;
+	}
 }

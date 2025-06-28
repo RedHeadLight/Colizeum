@@ -1,7 +1,10 @@
 .reglamentsList__list {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
 	gap: 17px 19px;
+
+	@media(min-width: $tablet) {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 .reglamentsList__link {

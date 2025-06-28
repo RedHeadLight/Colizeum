@@ -1,7 +1,11 @@
 .videoList__list {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+
+	@media(min-width: $desktop) {
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+	}
 }
 
 .videoList__item {
@@ -12,6 +16,7 @@
 
 .videoList__preview {
 	border-radius: 20px;
+	width: 100%;
 }
 
 .videoList__itemTitle {

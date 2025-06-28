@@ -1,6 +1,17 @@
 .backButton {
+
+	&--absolute {
+		@media(min-width: $desktopMedium) {
+			position: absolute;
+			left: 30px;
+			top: 90px;
+		}
+	}
+}
+
+.backButton__link {
 	display: flex;
-	gap: 5.5px;
+	gap: 5px;
 	align-items: center;
 	color: $yellow;
 	font-family: $ttc;
@@ -10,8 +21,15 @@
 	width: 125px;
 	text-transform: uppercase;
 	text-decoration: none;
-}
 
-.backButton svg {
-	flex-shrink: 0;
+	svg {
+		flex-shrink: 0;
+		color: $white;
+	}
+
+	&:hover {
+		svg {
+			color: $yellow;
+		}
+	}
 }

@@ -7,7 +7,7 @@ block content
 	article.profile
 		.container.container.profile__container
 			include ../blocks/backButton/backButton.pug
-			+backButton([], '', 'Вернуться к рейтингу')
+			+backButton(['absolute'], 'profile__back', 'Вернуться к рейтингу')
 
 			include ../blocks/partnerList/partnerList.pug
 			+partnerList([], 'profile__player', 1)

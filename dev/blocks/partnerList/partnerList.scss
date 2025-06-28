@@ -26,13 +26,23 @@
 }
 
 .partnerList__header {
-	display: flex;
-	gap: 21px;
-	margin-bottom: 10px;
+	display: grid;
+	grid-template-columns: repeat(2, 95px) 1fr;
+	gap: 10px;
+
+	@media (min-width: $desktop) {
+		display: flex;
+		gap: 21px;
+		margin-bottom: 10px;
+	}
 }
 
 .partnerList__avatar {
 	border-radius: 11px;
+
+	@media (min-width: $mobileMedium) {
+		grid-column: 1 / 2;
+	}
 }
 
 .partnerList__headerTexts {
@@ -41,10 +51,19 @@
 	line-height: 90%;
 	color: $white;
 	font-family: $neue;
+
+	@media(max-width: ($desktopMedium - 1px)) {
+		grid-column: 1 / 4;
+	}
+
+	@media(min-width: $desktopMedium) {
+		grid-column: 2 / 3;
+	}
 }
 
 .partnerList__headerText b {
 	color: $yellow;
+	display: block;
 }
 
 .partnerList__headerStatus {
@@ -61,17 +80,43 @@
 	padding: 3px 10px 3px 6px;
 	margin-top: 17px;
 	justify-self: flex-start;
+
+	@media (min-width: $desktop) {
+		margin: 17px 0 0;
+	}
 }
 
 .partnerList__rang {
 	margin-left: auto;
+    width: 100%;
+    border-radius: 20px;
+	margin-bottom: 20px;
+
+	@media (min-width: $tablet) {
+		width: auto;
+		margin-bottom: 0;
+	}
+
+	@media(max-width: ($desktopMedium - 1px)) {
+		grid-column: 2/3;
+		grid-row: 1/2;
+	}
+
+	@media(min-width: $desktopMedium) {
+		grid-column: span 2;
+	}
 }
 
 
 .partnerList__main {
-	display: flex;
-	gap: 14px;
-	margin-bottom: 10px;
+	display: grid;
+	gap: 20px;
+	margin-top: 20px;
+	@media (min-width: $desktop) {
+		display: flex;
+		gap: 14px;
+		margin-bottom: 10px;
+	}
 }
 
 .partnerList__total {
@@ -121,6 +166,10 @@
 
 .partnerList__contactsWrapper {
 	margin-bottom: 28px;
+	margin-top: 20px;
+	@media (min-width: $tablet) {
+		margin-top: 0;
+	}
 }
 
 .partnerList__contactsHeading {

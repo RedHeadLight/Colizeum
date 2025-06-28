@@ -29,12 +29,12 @@ mixin _partnerFilter(modificator, extraClasses)
 			]
 		for select in selects
 			+filterSelect(['w286'], 'filter__select', select)
+		.partner__btnsWrapper
+			include ../filterBtn/filterBtn.pug
+			+filterBtn(['wide'], 'filter__filterBtn filter__filterBtn--ml10', 'применить')
 
-		include ../filterBtn/filterBtn.pug
-		+filterBtn(['wide'], 'filter__filterBtn filter__filterBtn--ml10', 'применить')
-
-		include ../resetBtn/resetBtn.pug
-		+resetBtn([], 'reset__resetBtn', 'сбросить')
+			include ../resetBtn/resetBtn.pug
+			+resetBtn([], 'reset__resetBtn', 'сбросить')
 
 
 	

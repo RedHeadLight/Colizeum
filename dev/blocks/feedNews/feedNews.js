@@ -1,1 +1,0 @@
-//.frontBlockList scripts goes here

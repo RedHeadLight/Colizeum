@@ -1,1 +1,0 @@
-//.allNews scripts goes here

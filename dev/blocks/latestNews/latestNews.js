@@ -1,1 +1,0 @@
-//.latestNews scripts goes here

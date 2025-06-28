@@ -14,9 +14,26 @@
 	background-color: #FFFFFF4D;
 	border-radius: 34px;
 	padding: 7px 8px;
+	display: flex;
+	align-items: center;
+
+	&:hover {
+		background-color: $black;
+		color: yellow;
+
+	}
 }
 
 .pageLabels__label--primary {
 	background-color: $yellow;
 	color: $black;
+
+	&::before {
+		width: 4px;
+		height: 4px;
+		content: '';
+		background-color: $black;
+		border-radius: 100%;
+		margin-right: 3px;
+	}
 }

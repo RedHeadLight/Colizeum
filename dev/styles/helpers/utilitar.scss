@@ -33,6 +33,12 @@
 	}
 }
 
+.upToDesktopMedium {
+	@media (min-width: $desktopMedium) {
+		display: none !important;
+	}
+}
+
 .onlyDesktop {
 	@media (max-width: ($desktop - 1px)) {
 		display: none !important;
@@ -48,7 +54,7 @@
 	&--medium {
 		max-width: $containerMedium;
 	}
-	
+
 	&--wide {
 		max-width: $containerWide;
 	}

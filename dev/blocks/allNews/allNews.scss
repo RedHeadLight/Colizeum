@@ -19,4 +19,8 @@
     bottom: 45px;
     left: 50%;
     transform: translateX(-50%);
+
+	@media(max-width: $desktopMedium) {
+		bottom: 20px;
+	}
 }

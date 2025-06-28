@@ -4,12 +4,15 @@
 }
 
 .clubsList__item {
-	display: flex;
 	border-radius: 25px;
 	padding: 25px;
 	background-color: $grey;
-	justify-content: space-between;
-	gap: 20px;
+
+	@media(min-width: $mobileMedium) {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+	}
 }
 
 .clubsList__texts {

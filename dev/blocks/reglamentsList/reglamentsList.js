@@ -1,1 +1,0 @@
-//.reglamentsList scripts goes here

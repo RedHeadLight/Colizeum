@@ -10,10 +10,10 @@ mixin footer(modificator, extraClasses)
 
 	div(class=classList) 
 		footer.footer 
-			.footer__container
+			.container.container--wide.footer__container
 				.footer__cover
 					.footer__wrapper 
-						img(src="./images/logo.svg", alt="")
+						img(src="./images/logo.svg", alt="", width="211", height="31")
 						a(href="#").footer__copyright Colizeum  2024 © All Rights Reserved
 					nav.footer__menu 
 						.footer__item Навигация
@@ -21,16 +21,16 @@ mixin footer(modificator, extraClasses)
 								li.footer__subitem 
 									a(href="#").footer__link Расписание
 								li.footer__subitem 
-									a(href="#").footer__link Регламенты 
-								li.footer__subitem 
-									a(href="#").footer__link Клубы 
-								li.footer__subitem 
 									a(href="#").footer__link Рейтинг
+								li.footer__subitem 
+									a(href="#").footer__link Регламенты 
 								li.footer__subitem 
 									<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M2.00105 12.4326L4.16522 10.2859C3.32516 9.23849 2.91834 7.909 3.02841 6.57084C3.13848 5.23267 3.75708 3.98754 4.757 3.09146C5.75692 2.19537 7.06216 1.71646 8.40435 1.75319C9.74653 1.78991 11.0236 2.33949 11.9731 3.28891C12.9225 4.23833 13.472 5.51544 13.5088 6.85762C13.5455 8.1998 13.0666 9.50504 12.1705 10.505C11.2744 11.5049 10.0293 12.1235 8.69113 12.2336C7.35296 12.3436 6.02348 11.9368 4.97605 11.0967L2.82938 13.2434C2.77516 13.2981 2.71064 13.3415 2.63955 13.3711C2.56847 13.4007 2.49222 13.416 2.41522 13.416C2.33821 13.416 2.26196 13.4007 2.19088 13.3711C2.1198 13.3415 2.05528 13.2981 2.00105 13.2434C1.89591 13.1346 1.83714 12.9893 1.83714 12.838C1.83714 12.6867 1.89591 12.5414 2.00105 12.4326ZM8.24855 11.0967C9.05616 11.0967 9.84563 10.8573 10.5171 10.4086C11.1886 9.9599 11.712 9.32217 12.0211 8.57604C12.3301 7.82991 12.411 7.00888 12.2534 6.21679C12.0959 5.42471 11.707 4.69712 11.1359 4.12606C10.5648 3.555 9.83726 3.1661 9.04517 3.00854C8.25308 2.85098 7.43206 2.93185 6.68593 3.2409C5.93979 3.54996 5.30206 4.07333 4.85338 4.74483C4.4047 5.41634 4.16522 6.20581 4.16522 7.01341C4.16522 8.09638 4.59542 9.13499 5.3612 9.90077C6.12697 10.6665 7.16558 11.0967 8.24855 11.0967Z" fill="#FFF566"/>
 									</svg>
 									a(href="#").footer__link Найти напарника 
+								li.footer__subitem 
+									a(href="#").footer__link Клубы 
 						.footer__item Полезное
 							ul.footer__list 
 									li.footer__subitem 
@@ -47,7 +47,9 @@ mixin footer(modificator, extraClasses)
 										a(href="#").footer__link Новости киберспорта
 									li.footer__subitem 
 										a(href="#").footer__link Турнирные новости  
-				img(src="./images/footer-bg.jpg", alt="")
+				
+				img(src="./images/footer-bg.jpg", alt="").footer__colizeum
+				
 				.footer__bottom 
 					a(href="#").footer__bottomLink Пользовательское соглашение
 					a(href="#").footer__bottomLink Сайт запустил 

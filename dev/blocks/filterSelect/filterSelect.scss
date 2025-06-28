@@ -6,6 +6,15 @@
 	&--grow {
 		flex-grow: 1;
 	}
+
+	&--fullWidthOnMobile {
+		width: 100%;
+		justify-content: center;
+
+		@media (min-width: $tablet) {
+			width: auto;
+		}
+	}
 }
 
 .filterSelect__select {
@@ -27,16 +36,23 @@
 }
 
 .filterSelect--w355 {
-	min-width: 355px;
+	@media(min-width: $desktop) {
+		min-width: 355px;
+	}
 }
 
 
 .filterSelect--w359 {
-	min-width: 359px;
+	@media(min-width: $desktop) {
+		min-width: 359px;
+	}
 }
 
 .filterSelect--w286 {
-	min-width: 286px;
+
+	@media(min-width: $desktop) {
+		min-width: 286px;
+	}
 }
 
 .filterSelect--w378 {

@@ -1,1 +1,0 @@
-//.lkAvatarList scripts goes here

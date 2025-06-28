@@ -1,4 +1,4 @@
-mixin backButton(modificator, extraClasses, text)
+mixin backButton(modificator, extraClasses, text, svgType)
 	- classList = 'backButton'
 
 	if modificator
@@ -9,9 +9,15 @@ mixin backButton(modificator, extraClasses, text)
 		- classList = classList + ' ' + extraClasses
 
 	div(class=classList) 
-		a.backButton(href="#")
-			<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<rect width="37" height="37" rx="18.5" transform="matrix(-1 0 0 1 37 0)" fill="white"/>
-				<path fill-rule="evenodd" clip-rule="evenodd" d="M25.4281 17.2624L16.3094 17.2624L20.2952 13.2766L16.7949 13.2766L12.4466 17.6249L11.5715 18.5L12.4466 19.375L16.7949 23.7233L20.2952 23.7233L16.3094 19.7375L25.4281 19.7375L25.4281 17.2624Z" fill="black"/>
-			</svg>
+		a.backButton__link(href="#")
+			if svgType == 'out'
+				<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect width="37" height="37" rx="18.5" transform="matrix(-1 0 0 1 37 0)" fill="currentColor"/>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M25.4281 17.2624L16.3094 17.2624L20.2952 13.2766L16.7949 13.2766L12.4466 17.6249L11.5715 18.5L12.4466 19.375L16.7949 23.7233L20.2952 23.7233L16.3094 19.7375L25.4281 19.7375L25.4281 17.2624Z" fill="black"/>
+				</svg>
+			else
+				<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect width="37" height="37" rx="18.5" transform="matrix(-1 0 0 1 37 0)" fill="currentColor"/>
+					<path d="M21.9541 13.0869H15.1494V24.9131H21.9541V27H13V11H21.9541V13.0869ZM19.6172 18.2949H24V20.0166H19.6172L22.4727 22.7891H19.9648L16.8506 19.7637L16.2236 19.1553L16.8506 18.5469L19.9648 15.5215H22.4727L19.6172 18.2949Z" fill="black"/>
+				</svg>
 			span #{text}

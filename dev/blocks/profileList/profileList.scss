@@ -1,5 +1,23 @@
 .profileList {
-	display: block;
+	max-width: 100%;
+	overflow-x: auto;
+
+	&::-webkit-scrollbar{
+		width: 0;
+		height: 13px;
+		background: transparent;
+		border-radius: 16px
+	}
+
+	&::-webkit-scrollbar-thumb{
+		background: $white;
+		border-radius: 15px;
+		background-clip: content-box;
+		border: 5px solid transparent;
+	}
+}
+
+.profileList__table {
 	margin-top: 20px;
 	border-collapse: collapse;
 	border-radius: 20px;

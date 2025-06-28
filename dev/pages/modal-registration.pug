@@ -4,18 +4,22 @@ block variables
 	- var title = 'Регистрация'
 
 block content
-	.modalOverlay
+	.modalOverlay.modalOverlay--visible
 
-	.modal.modal--wide
+	.modal.modal--wide.modal--visible
 		.modal__header
 			.modal__headerTitle Регистрация
 
 		.modal__body.modal__body--withBorder
+			button(type="button" aria-label="Закрыть").modal__close
+				<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+					<g fill="#ffec69" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(9.84615,9.84615)"><path d="M21.73438,19.64063l-2.09766,2.09375c-0.38281,0.38672 -1.00781,0.38672 -1.39453,0l-5.24219,-5.23828l-5.23828,5.23828c-0.38672,0.38672 -1.01562,0.38672 -1.39844,0l-2.09766,-2.09375c-0.38672,-0.38672 -0.38672,-1.01172 0,-1.39844l5.23828,-5.24219l-5.23828,-5.23828c-0.38281,-0.39062 -0.38281,-1.01953 0,-1.39844l2.09766,-2.09766c0.38281,-0.38672 1.01172,-0.38672 1.39844,0l5.23828,5.24219l5.24219,-5.24219c0.38672,-0.38672 1.01563,-0.38672 1.39453,0l2.09766,2.09375c0.38672,0.38672 0.38672,1.01563 0.00391,1.40234l-5.24219,5.23828l5.23828,5.24219c0.38672,0.38672 0.38672,1.01172 0,1.39844z"></path></g></g>
+				</svg>
 			form(action="#").modal__content.registrationModal
 				.registrationModal__grid.registrationModal__grid--3
 					include ../blocks/modalField/modalField.pug
 					+modalField([], 'registrationModal__field', 'Полное имя', 'password', 'registrationName', 'registrationName', 'ФИО', '*')
-					+modalField([], 'registrationModal__field', '+7 (999) 999-99-99', 'tel', 'registrationPhone', 'registrationPhone', 'Телефон', '*')
+					+modalField([], 'registrationModal__field phoneInput', '+7 (999) 999-99-99', 'tel', 'registrationPhone', 'registrationPhone', 'Телефон', '*')
 					+modalField(['error'], 'registrationModal__field', 'Введите почту', 'email', 'registrationEmail', 'registrationEmail', 'Email', '*')
 					
 				.registrationModal__grid.registrationModal__grid--2
@@ -94,7 +98,7 @@ block content
 
 				.registrationModal__grid.registrationModal__grid--2
 					+modalField([], 'registrationModal__field', 'Введите  никнейм', 'text', 'registrationNickname', 'registrationNickname', 'Никнейм Battlefye')
-					+modalField([], 'registrationModal__field', 'Название название команды', 'text', 'registrationTeam', 'registrationTeam', 'Название название команды')
+					+modalField([], 'registrationModal__field', 'Название команды', 'text', 'registrationTeam', 'registrationTeam', 'Название команды')
 
 				.registrationModal__checkboxes
 					include ../blocks/modalCheckbox/modalCheckbox.pug

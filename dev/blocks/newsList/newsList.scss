@@ -1,7 +1,11 @@
 .newsList__list {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
 	gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+
+	@media (min-width: $desktopMedium) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
 .newsList__item {

@@ -3,10 +3,12 @@
 	border-bottom: 1px solid #FFFFFF1A;
 	border-radius: 25px;
 	padding: 25px 20px;
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 10px;
+	@media(min-width: $desktop) {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
 
 	&--bigGap {
 		gap: 20px;
@@ -17,12 +19,33 @@
 		border: none;
 		background: none;
 	}
+
+	& > * + * {
+		margin-top: 20px;
+
+		@media(min-width: $desktop) {
+			margin-top: 0;
+		}
+	}
 }
 
 .form__part {
-	&--flex {
+	@media(min-width: $desktop) {
+		&--flex {
+			display: flex;
+			gap: 10px;
+		}
+	}
+
+	&--btns {
+		margin-top: 20px;
 		display: flex;
+		justify-content: center;
 		gap: 10px;
+
+		@media(min-width: $desktop) {
+			margin-top: 0;
+		}
 	}
 
 	&--grow {
@@ -35,9 +58,24 @@
 //
 
 .filter--rating {
+
+	display: grid;
 	gap: 10px;
-	display: flex;
-	gap: 52px;
+
+	@media (min-width: $desktop) {
+		gap: 10px;
+		display: flex;
+		gap: 52px;
+	}
+}
+
+.filter--rating .filter__part {
+	display: grid;
+	gap: 10px;
+
+	@media (min-width: $desktop) {
+		display: flex;
+	}
 }
 
 .filter--insruction {
@@ -49,12 +87,29 @@
 }
 
 .filter__select {
-	display: flex;
-	gap: 15px;
-	align-items: center;
+
+	display: grid;
+	gap: 10px;
+
+	@media (min-width: $tablet) {
+		display: flex;
+		gap: 15px;
+		align-items: center;
+	}
+
+
+	& + & {
+		margin-top: 20px;
+		@media(min-width: $desktop) {
+			margin-top: 0;
+		}
+	}
 }
 
 .filter__filterBtn--ml10 {
-	margin-left: 10px;
+
+	@media(min-width: $desktop) {
+		margin-left: 10px;
+	}
 }
 

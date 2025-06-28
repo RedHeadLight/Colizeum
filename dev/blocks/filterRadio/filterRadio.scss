@@ -1,16 +1,30 @@
 .filterRadio  {
 	display: flex;
 	gap: 21px;
+	align-items: center;
 
 	&--rows {
 		display: grid;
 		gap: 10px;
 	}
+
+	@media(max-width: ($desktop - 1px)) {
+		&:has(.filterRadio__heading) {
+			display: block;
+		}
+	}
+}
+
+.filterRadio__heading {
+	@media(max-width: ($desktop - 1px)) {
+		display: block;
+		margin-bottom: 10px;
+	}
 }
 
 .filterRadio__list {
 	display: flex;
-	gap: 21px;
+	gap: 10px 21px;
 	flex-wrap: wrap;
 }
 

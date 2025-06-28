@@ -1,7 +1,11 @@
 .reviewsList__list {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
 	gap: 20px;
+
+	@media(min-width: $desktop) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
 .reviewsList__item {

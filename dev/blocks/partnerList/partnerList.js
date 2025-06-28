@@ -1,1 +1,0 @@
-//.partnerList scripts goes here

@@ -1,8 +1,18 @@
 .pageNav {
 	margin-top: 86px;
-	display: flex;
-	justify-content: space-between;
-	gap: 20px;
+
+	@media(min-width: $mobileMedium) {
+		display: grid;
+		gap: 30px;
+		justify-content: center;
+	}
+
+	@media(min-width: $tablet) {
+		justify-content: space-between;
+		display: flex;
+		gap: 20px;
+		width: 100%;
+	}
 }
 
 .pageNav__link {

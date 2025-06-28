@@ -1,1 +1,0 @@
-//.ratingList scripts goes here

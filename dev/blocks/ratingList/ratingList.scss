@@ -1,5 +1,23 @@
 .ratingList {
-	display: block;
+	max-width: 100%;
+	overflow-x: auto;
+
+	&::-webkit-scrollbar{
+		width: 0;
+		height: 13px;
+		background: transparent;
+		border-radius: 16px
+	}
+
+	&::-webkit-scrollbar-thumb{
+		background: $white;
+		border-radius: 15px;
+		background-clip: content-box;
+		border: 5px solid transparent;
+	}
+}
+
+.ratingList__table {
 	margin-bottom: 30px;
 	margin-top: 20px;
 	border-collapse: collapse;
@@ -14,6 +32,25 @@
 		&:nth-child(3){width: 200px;}
 		&:nth-child(4){width: 200px;}
 		&:nth-child(5){width: 400px;}
+	}
+}
+
+.ratingList__list {
+	max-width: 100%;
+	overflow-x: auto;
+
+	&::-webkit-scrollbar{
+		width: 0;
+		height: 13px;
+		background: transparent;
+		border-radius: 16px
+	}
+
+	&::-webkit-scrollbar-thumb{
+		background: $white;
+		border-radius: 15px;
+		background-clip: content-box;
+		border: 5px solid transparent;
 	}
 }
 
@@ -74,6 +111,10 @@
 		border-top-right-radius: 20px;
 		background-color: #3E3E3E;
 	}
+}
+
+.ratingList__item {
+	background-color: #282828;
 }
 
 .ratingList__cell {
